@@ -1,0 +1,178 @@
+﻿/* ========== Inport Fonts ========== */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(font/Roboto-Light.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(font/Roboto-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(font/Roboto-Bold.ttf) format('ttf');
+}
+
+
+/* ========== Main Styles ========== */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #e5e5e5;
+}
+
+
+/* ========== Page header (Top bar) ========== */
+
+.page-header {
+    width: 100%;
+    position: fixed;
+    background: #6472cd;
+    top: 0;
+    z-index: 500;
+    height: 64px;
+    max-height: 64px;
+    box-shadow: none;
+}
+
+.ndroidme-logo a {
+    float: left;
+    height: 64px;
+    width: 90px;
+    outline: none;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.ndroidme-logo a:hover {
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ndroidme-logo img {
+    width: 38px;
+    margin: 10px 0px 0px 24px;
+}
+
+.resp-name-logo {
+    display: none;
+    position: absolute;
+    height: 56px;
+    width: 100%;
+    line-height: 56px;
+    padding-left: 60px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.header-menu ul {
+    float: right;
+    margin: 0;
+}
+
+.header-menu ul li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 45px;
+    height: 64px;
+}
+
+.header-menu ul li a {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 64px;
+    outline: none;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -ms-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.header-menu ul li a:hover {
+    opacity: .87;
+}
+
+.responsive-menu-overlay {
+    display: none;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    opacity: .5;
+    margin-top: -1px;
+}
+
+.resp-menu-ico {
+    display: none;
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.resp-menu-ico span {
+    display: block;
+    background-color: #fff;
+    width: 22px;
+    height: 2px;
+}
+
+.resp-menu-ico span:first-child {
+    margin-top: 22px;
+    margin-bottom: 3px;
+}
+
+.resp-menu-ico span:last-child {
+    margin-top: 3px;
+}
+
+
+/* ========== Cards structure ========== */
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========== Page Footer ========== */
+
+.page-footer {
+    background: #494e52;
+    color: #fff;
+    width: 100%;
+    height: 96px;
+}
+
+.page-footer .copyright {
+    line-height: 96px;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
+    margin-right: 85px;
+}
