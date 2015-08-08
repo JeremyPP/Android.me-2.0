@@ -20,3 +20,18 @@ $(".responsive-menu-overlay").click(function(){
     $(".header-menu").css("marginLeft", "-280px");
     $(".responsive-menu-overlay").css("display", "none");
 });
+
+
+/* Navigate between articles with keyboard arrows */
+
+function TeclaRedir() {
+    if (window.event) {
+        var keynum = event.keyCode;
+    } else if (event.which) {
+        var keynum = event.which;
+    } if (keynum == 39) {
+        window.self.location.href = "http://ndroidme.com/news.php?article=473"; // replace by a dynamic URL (php) to get the prev. article
+    } else if (keynum == 37) {
+        window.self.location.href = "http://ndroidme.com/news.php?article=475"; // replace by a dynamic URL (php) to ge the next article
+    }
+};

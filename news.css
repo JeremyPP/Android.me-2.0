@@ -19,7 +19,7 @@
 }
 
 
-/* ========== Main Container ========== */
+/* ========== Vote Container ========== */
 
 .vote-container {
     height: auto;
@@ -272,55 +272,6 @@
 /* ========== Media Queries ========== */
 
 @media screen and (max-width: 840px) {
-
-    .page-header {
-        height: 56px;
-    }
-
-    .header-menu {
-        background-color: #eee;
-        height: 100%;
-        width: 280px;
-        position: fixed;
-        margin-top: 56px;
-        margin-left: -280px;
-        -webkit-transition: all 200ms linear;
-        -moz-transition: all 200ms linear;
-        -ms-transition: all 200ms linear;
-        -o-transition: all 200ms linear;
-        transition: all 200ms linear;
-    }
-    
-    .header-menu ul {
-        float: none;
-        padding-left: 0;
-    }
-        
-    .header-menu ul li {
-        display: block;
-        width: calc(100% - 30px);
-        padding-left: 30px;
-    }
-    
-    .header-menu ul li:hover {
-        background-color: #ccc;
-    }
-    
-    .header-menu ul li a {
-        color: #333;
-    }
-    
-    .resp-menu-ico {
-        display: block;
-    }
-    
-    .ndroidme-logo {
-        display: none;
-    }
-    
-    .resp-name-logo {
-        display: block;
-    }
     
     .header-extention {
         display: none;
@@ -388,17 +339,6 @@
     
     .share-article .share-links img {
         float: none;
-    }
-    
-    .page-footer {
-        height: 64px;
-        color: #9FA5A9;
-    }
-    
-    .page-footer .copyright {
-        line-height: 64px;
-        text-align: center;
-        margin-right: 0;
     }
 
 }
