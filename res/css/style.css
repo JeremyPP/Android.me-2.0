@@ -4,21 +4,21 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url(res/font/Roboto-Light.ttf) format('ttf');
+  src: local('Roboto Light'), local('Roboto-Light'), url(../font/Roboto-Light.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(res/font/Roboto-Regular.ttf) format('ttf');
+  src: local('Roboto'), local('Roboto-Regular'), url(../font/Roboto-Regular.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(res/font/Roboto-Bold.ttf) format('ttf');
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(../font/Roboto-Bold.ttf) format('ttf');
 }
 
 
@@ -221,16 +221,13 @@ body {
         color: #333;
     }
     
-    .resp-menu-ico {
+    .resp-menu-ico,
+    .resp-name-logo {
         display: block;
     }
     
     .ndroidme-logo {
         display: none;
-    }
-    
-    .resp-name-logo {
-        display: block;
     }
     
     /* footer */
