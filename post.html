@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- Page style -->
+        <link rel="stylesheet" href="res/css/newPost.css">
+        
+         <!-- Import jQuery (from Google) --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <!-- Page info -->
+        <title>New post | Android.me</title>
+    </head>
+    <body>
+        <header>
+            <div class="cancel-post">cancel</div>
+        </header>
+    
+        <section class="new-post-main-container">
+            
+            <!-- Display future ID that will be given to the new post -->
+            <h1>New post - id: 488</h1>
+    
+            <div class="new-article">
+                <form action="post.php" method="post" enctype="multipart/form-data">
+                
+                    <!-- Title section -->
+                    <textarea id="post-title" name="title" type="text" placeholder="Article Title" required /></textarea>
+                    
+                    <!-- Author section -->
+                    <label class="post-author-label">By:</label>
+                    <input id="post-author" name="writer" type="text" placeholder="Jérémy" required />
+                    
+                    <!-- Tags section -->
+                    <label class="post-tags-label">Tags:</label>
+                    <input id="post-tags" name="tags" type="text" placeholder="NEXUS OTHERS LG" required />
+                    
+                    <!-- Main image section -->
+                    <label class="post-img-label">
+                        <span id="img-label-change">Choose main photo</span>
+                        <input id="post-img" name="featured" type="file" onchange="get_filename(this);" required >
+                    </label>
+                    <img class="image-preview" src="" width="840" style="display:none;" />
+                    
+                    <!-- Article content section -->
+                    <textarea id="post-content" name="content" type="text" placeholder="Lorem ipsum dolor sit amet, putant accusa..." required /></textarea>
+                    
+                    <!-- From/Via section -->
+                    <label class="post-source-label">Source:</label>
+                    <input id="post-source-name" name="from" type="text" placeholder="The Verge" required />
+                    <input id="post-source-url" name="from" type="text" placeholder="http://theverge.com" required />
+                    
+                    <!-- Submit form & Create "preview" article -->
+                    <input id="post-preview" type="submit" value="Next (Preview)"/>
+                </form>
+            </div>
+        </section>
+        
+        <script>
+        
+            //cancel button shadow on scroll
+            $(window).scroll(function() {
+                if($(window).scrollTop() > 2) {
+                    $(".cancel-post").css('box-shadow', '0 2px 5px rgba(0,0,0,.26)');
+                } else{
+                    $(".cancel-post").css('box-shadow', 'none');
+                }
+            });
+            
+            // display selected image and image path before upload
+            function get_filename(obj) {
+                var file = obj.value;
+                document.getElementById('img-label-change').innerHTML = file;
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+                $(".image-preview").fadeIn("fast").attr('src',URL.createObjectURL(event.target.files[0]));
+            }
+        </script>
+    </body>
+</html>
