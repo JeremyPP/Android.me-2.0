@@ -17,7 +17,7 @@
         <!-- Page info -->
         <title>It's Apple's fault that the Nexus 6 doesn't have a fingerprint sensor | Android.me</title>
         <meta name="description" content="Former Motorola CEO Dennis Woodside has confessed that
-        the dimple at the back of the Nexus 6 was originally intended to ..."/>
+        the dimple at the back of the Nexus 6 was originally intended to ...">
         <meta name="keywords" content="">
     </head>
     
@@ -163,13 +163,26 @@
         <!-- Comment section -->
         <section class="comment-section">
             <div class="comments-container">
+			
+				<!-- Script for Disqus comments (Should work when site is live. - TO BE TESTED!) -->
+				<div id="disqus_thread"></div>
+				<script>
+				(function() {
+				var d = document, s = d.createElement('script');
+				s.src = '//droidme.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+							
             </div>
         </section>
         
         <!-- Page footer -->   <!-- Modularity?  (import to all pages) -->
         <footer class="page-footer">
             <div class="footer-links"></div>
-            <div class="copyright">Copyright © 2013 - 2015. Android.me. All Rights Reserved.</div>
+            <div class="copyright">Copyright © 2013 - 2016. Android.me. All Rights Reserved.</div>
         </footer>
         
         
@@ -190,20 +203,17 @@
 
 W.I.P:
 
-- Media Queries (Responsiviness);
+- Fix some styles issue on Resp. mode;
 - Code optimization;
-- Footer optimizations;
-- New folder organization (structure);
+- New footer (?);
 - 
 
 
 TO-DO:
 
 - G.A. script;
-- Disqus implemetation;
 - Share links (Facebook, Twitter, Google Plus);
 - Accessibility (?);
-- More global styles for basic elements;
 - 
 
 
