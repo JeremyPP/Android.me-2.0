@@ -13,17 +13,23 @@
         
         <!-- Import jQuery (from Google) --> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		<!-- Import Material Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<!-- Import Roboto font (Google font) -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
         
         <!-- Page info -->
-        <title>It's Apple's fault that the Nexus 6 doesn't have a fingerprint sensor | Android.me</title>
+        <title>It's Apple's fault that the Nexus 6 doesn't have a fingerprint sensor | Android.me</title>	<!-- Dynamic -->
         <meta name="description" content="Former Motorola CEO Dennis Woodside has confessed that
-        the dimple at the back of the Nexus 6 was originally intended to ...">
-        <meta name="keywords" content="">
+        the dimple at the back of the Nexus 6 was originally intended to ...">	<!-- Dynamic -->
+        <meta name="keywords" content="">	<!-- ??? -->
     </head>
     
     <body>
     
-        <!-- top header bar (menu) -->
+        <!-- Top header bar (menu) -->
         <header class="page-header">
         
             <!-- Elements for the responsive menu -->
@@ -52,22 +58,24 @@
                     <li><a href="#">Profile</a></li>
                 </ul>
             </nav>
+			
         </header>
         
         <!-- Shadow overlay for the responsive menu -->
         <div class="responsive-menu-overlay"></div>
         
-        <!-- Separator for the article page -->
-        <div class="header-extention"></div>
-        
         <!-- Article container -->
-        <section class="main-container card">
+        <section class="main-container">
         
             <!-- Vote system -->
-            <div class="vote-container">       <!-- TO BE IMPLEMENTED! -->
-                <div class="arrow-up"></div>
+            <div class="vote-container">       <!-- Back-end: TO BE IMPLEMENTED! -->
+                <button class="upVote">
+					<i class="material-icons">thumb_up</i>
+				</button>
                 <div class="likes">+ 17</div>
-                <div class="arrow-down" data-tooltip="You must be a registered user to down vote this article. You can Log In now or create a new account to use this feature."></div>
+				<button class="downVote voteNotActive" data-tooltip="You need to be a registered user to down vote this article.">
+					<i class="material-icons">thumb_down</i>
+				</button>
             </div>
         
             <!-- Article content -->
@@ -80,14 +88,14 @@
                     <h1>It's Apple's fault that the Nexus 6 doesn't have a fingerprint sensor</h1>       <!-- PLACEHOLDER -->
                     
                     <!-- Article info (Author, tags, date, etc...) -->
-                    <div class="article-info">       <!-- PLACEHOLDER -->
-                        BY&nbsp;
-                        <a href="tags2.php?writer=theverge">Jérémy</a>
-                        &nbsp;|&nbsp;POSTED:&nbsp;
+                    <div class="article-info">       <!-- PLACEHOLDERS -->
+                        By&nbsp;
+                        <a href="tags2.php?writer=theverge">Jérémy Pougnet</a>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;Posted:&nbsp;
                         <a href="tags2.php?date=01/26/2015">Mon, Jan 26, 2015</a>
-                        &nbsp;|&nbsp;TAGS:&nbsp;&nbsp;
-                        <a class="news_tags" href="#" tag="NEXUS">NEXUS</a>
-                        <a class="news_tags" href="#" tag="OTHERS">OTHERS</a>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;Tags:&nbsp;
+                        <span><a class="news_tags" href="#" tag="NEXUS">NEXUS</a></span>
+                        <a class="news_tags" href="#" tag="OTHERS">APPLE</a>
                         <a class="news_tags" href="#" tag="MOTOROLA">MOTOROLA</a>
                     </div>
                     
@@ -130,7 +138,7 @@
                     </p>
                 </div>
                 
-                <!-- Article footer (from/via) -->       <!-- New implementation -->
+                <!-- Article footer (from/via) -->       <!-- New implementation (multiple sources possible) -->
                 <footer>
                     <div class="fromvia">
                         Source:&nbsp;
@@ -142,7 +150,7 @@
             
             </article>
             
-            <!-- Share links (Face, Twitter and G+) -->
+            <!-- Share links (Facebook, Twitter and G+) -->
             <div class="share-article">
                 <div class="share-txt">Share this story with your friends:</div>
                 <div class="share-links">
@@ -179,7 +187,7 @@
             </div>
         </section>
         
-        <!-- Page footer -->   <!-- Modularity?  (import to all pages) -->
+        <!-- Page footer -->   <!-- Modular?  (import to all pages) -->
         <footer class="page-footer">
             <div class="footer-links"></div>
             <div class="copyright">Copyright © 2013 - 2016. Android.me. All Rights Reserved.</div>
@@ -201,16 +209,11 @@
 <!-- =====================
 
 
-W.I.P:
+W.I.P / TO-DO:
 
-- Fix some styles issue on Resp. mode;
-- Code optimization;
+- Responsive mode: voting, nav (menu), some other style fixes;
 - New footer (?);
-- 
-
-
-TO-DO:
-
+- navigate with keyboard;
 - G.A. script;
 - Share links (Facebook, Twitter, Google Plus);
 - Accessibility (?);

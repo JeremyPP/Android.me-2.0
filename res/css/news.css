@@ -1,99 +1,94 @@
-﻿/* ========== Top header separation (Colored bar) ========== */
-
-.header-extention {
-    background: #6472cd;
-    height: 128px;
-    width: 100%;
-    padding-top: 64px;
-    margin-bottom: -160px;
-}
+﻿
 
 
 /* ========== Main Container ========== */
 
 .main-container {
-    max-width: 840px;
-    margin: 0 auto;
-    margin-top: 96px;
-    margin-bottom: 50px;
+	max-width: 840px;
+	margin: 0 auto;
+	margin-top: 90px;
+	margin-bottom: 50px;
 }
+
 
 
 /* ========== Vote Container ========== */
 
 .vote-container {
-    height: auto;
-    width: auto;
-    position: absolute;
-    top: 232px;
-    margin-left: -100px;
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 125px;
+	margin-left: -100px;
+}
+
+.vote-container button {
+	width: 42px;
+	height: 42px;
+	border: none;
+	outline: none;
+	text-shadow: none;
+	box-shadow: none;
+	border-radius: 50px;
+	background: none;
+	color: #9E9E9E;
+}
+
+.vote-container button:hover {
+	cursor: pointer;
+	color: #757575;
+}
+
+.vote-container button:active {
+	background: #fafafa;
+}
+
+.vote-container button.voteNotActive:active,
+.vote-container button.voteNotActive:hover {
+	background: none;
+	cursor: default;
+}
+
+.vote-container button.downVote {
+	color: #eee !important;
 }
 
 .vote-container .likes {
-    font-size: 22px;
-    font-weight: 500;
-    font-family: Roboto medium;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 10px 0 10px 0;
-    color: #AAAAAA;
-}
-
-.arrow-up, .arrow-down {
-    margin: 0 auto;
-    width: 0; 
-    height: 0; 
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    -webkit-transition: all 150ms ease-in-out;
-    -moz-transition: all 150ms ease-in-out;
-    -ms-transition: all 150ms ease-in-out;
-    -o-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-}
-
-.arrow-up {
-	border-bottom: 15px solid #AAAAAA;
-}
-
-.arrow-down {
-	border-top: 15px solid #D0D0D0;
-}
-
-.arrow-up:hover {
-	border-bottom: 15px solid #898989;
-    cursor: pointer;
-}
-
-.arrow-up:active {
-	border-bottom: 15px solid #D0D0D0;
+	min-width: 42px;
+	text-align: center;
+	padding: 2px 0;
+	font-size: 18px;
+	font-weight: 500;
+	/*font-family: Roboto medium;*/
+	text-transform: uppercase;
+	color: #AAAAAA;
 }
 
 
-/* ========== Article top ========== */
+
+/* ========== Article top section ========== */
 
 .article-header h1 {
-    text-align: center;
-    font-weight: 400;
-    font-size: 49px;
-    line-height: 52px;
-    position: relative;
-    color: #555;
-    padding: 30px 30px 10px 30px;
-    margin: 0;
+	text-align: center;
+	font-weight: 300;
+	font-size: 44px;
+	line-height: 56px;
+	position: relative;
+	color: #555;
+	padding: 30px 30px 10px 30px;
+	margin: 0;
+	border-bottom: 1px solid #E0E0E0;
+	padding-bottom: 30px;
 }
 
 .article-info {
-    font-size: 17px;
-    font-weight: 500;
-    font-family: Roboto medium;
-    text-transform: uppercase;
-    padding: 0;
-    color: #AAAAAA;
-    text-align: right;
-    line-height: 42px;
-    margin: 25px 0 15px 0;
-    padding: 0 20px 0 20px;
+	font-size: 14px;
+	font-weight: 500;
+	/*font-family: Roboto medium;*/
+	color: #9E9E9E;
+	padding: 0 15px;
+	height: 72px;
+	line-height: 72px;
 }
 
 .article-info a {
@@ -101,22 +96,29 @@
     text-decoration: none;
 }
 
+.article-info a:hover {
+    color: #505ba4;
+	cursor: pointer;
+}
+
 .article-info a.news_tags {
     color: #FFFFFF;
-    background: #ff4081;
-    padding: 8px 10px 8px 10px;
+    background: #29d3e8;
+    padding: 4px 10px;
     margin-left: 5px;
-    border-radius: 19px;
+    border-radius: 20px;
     -webkit-transition: all 150ms ease-in-out;
     -moz-transition: all 150ms ease-in-out;
     -ms-transition: all 150ms ease-in-out;
     -o-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
+    font-size: 13px;
 }
 
 .article-info a.news_tags:hover {
-    background: #F85D92;
+    background: #00BCD4;
 }
+
 
 
 /* ========== Article image ========== */
@@ -126,11 +128,12 @@
 }
 
 
+
 /* ========== Article content ========== */
 
 .article-content {
-    padding: 25px 20px 20px 20px;
-    color: #333;
+	padding: 30px 0 20px 0;
+	color: #333;
 }
 
 .article-content p {
@@ -141,13 +144,14 @@
 }
 
 
+
 /* ========== Article source (From/via) ========== */
 
 .fromvia {
     color: #8A8A8A;
-    font-size: 17px;
-    font-family: Roboto Medium, sans-serif;
-    padding: 0 0 20px 20px;
+    font-size: 16px;
+    /*font-family: Roboto Medium, sans-serif;*/
+    padding: 0 0 30px 0;
 }
 
 .fromvia a {
@@ -165,42 +169,47 @@
 }
 
 
-/* ========== Share section ========== */
+
+/* ========== Share section (Social links) ========== */
 
 .share-article {
-    background: #7d878e;
-    height: 80px;
+    height: 100px;
     width: 100%;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    position: relative;
 }
 
 .share-article .share-txt,
 .share-article .share-links {
-    display: inline-block;
+    float: left;
 }
 
 .share-article .share-txt {
-    color: #fafafa;
-    font-size: 22px;
-    line-height: 80px;
-    padding-left: 85px;
+	color: rgba(0, 0, 0, 0.54);
+	font-size: 18px;
+	line-height: 100px;
+	padding-right: 42px;
+	text-align: right;
+	width: 50%;
+	box-sizing: border-box;
 }
 
 .share-article .share-links {
-    position: absolute;
-    margin: 15px 15px 15px 85px;
+	margin: 0;
+	height: 100px;
+	width: 50%;
+	box-sizing: border-box;
+	text-align: left;
+	padding-top: 29px;
+	padding-left: 42px;
 }
 
 .share-article .share-links img {
-    width: 50px;
+    width: 42px;
     margin: 0 10px;
-    float: left;
-    -webkit-transition: all 150ms ease-in-out;
-    -moz-transition: all 150ms ease-in-out;
-    -ms-transition: all 150ms ease-in-out;
-    -o-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
 }
 
 .share-article .share-links a {
@@ -212,6 +221,7 @@
 }
 
 
+
 /* ========== Comments ========== */
 
 .comment-section {
@@ -219,6 +229,7 @@
     width: 100%;
     min-height: 300px;
 }
+
 
 
 /* ========== Tooltip Styles ========== */
@@ -229,7 +240,9 @@
     cursor: pointer;
 }
 
+
 /* Hide the tooltip content by default */
+
 [data-tooltip]:before,
 [data-tooltip]:after {
     visibility: hidden;
@@ -239,27 +252,31 @@
     pointer-events: none;
 }
 
+
 /* Position tooltip below the element */
+
 [data-tooltip]:before {
-    position: absolute;
-    top: 150%;
-    left: 50%;
-    margin-top: 5px;
-    margin-left: -120px;
-    padding: 15px;
-    width: 160px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    background-color: #212121;
-    color: #fff;
-    content: attr(data-tooltip);
-    text-align: center;
-    font-size: 13px;
-    line-height: 1.3;
+	position: absolute;
+	top: 37px;
+	left: 50%;
+	margin-top: 5px;
+	margin-left: -120px;
+	padding: 10px;
+	width: 130px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 3px;
+	background-color: #212121;
+	color: #fff;
+	content: attr(data-tooltip);
+	text-align: center;
+	font-size: 13px;
+	line-height: 16px;
 }
 
+
 /* Show tooltip content on hover */
+
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
     visibility: visible;
@@ -267,6 +284,13 @@
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
 }
+
+
+
+/*======= Button ripple effect =======*/
+
+/* WIP */
+
 
 
 /* ========== Media Queries ========== */
