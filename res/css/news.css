@@ -102,21 +102,23 @@
 }
 
 .article-info a.news_tags {
-    color: #FFFFFF;
-    background: #29d3e8;
-    padding: 4px 10px;
-    margin-left: 5px;
-    border-radius: 20px;
-    -webkit-transition: all 150ms ease-in-out;
-    -moz-transition: all 150ms ease-in-out;
-    -ms-transition: all 150ms ease-in-out;
-    -o-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    font-size: 13px;
+	color: #29d3e8;
+	background: #ffffff;
+	border: 2px solid #29d3e8;
+	padding: 2px 8px;
+	margin-left: 5px;
+	border-radius: 20px;
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+	font-size: 13px;
 }
 
 .article-info a.news_tags:hover {
-    background: #00BCD4;
+	background: #29d3e8;
+	color: #ffffff;
 }
 
 
@@ -173,7 +175,7 @@
 /* ========== Share section (Social links) ========== */
 
 .share-article {
-    height: 100px;
+    height: 98px;
     width: 100%;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
@@ -190,7 +192,7 @@
 .share-article .share-txt {
 	color: rgba(0, 0, 0, 0.54);
 	font-size: 18px;
-	line-height: 100px;
+	line-height: 98px;
 	padding-right: 42px;
 	text-align: right;
 	width: 50%;
@@ -203,7 +205,7 @@
 	width: 50%;
 	box-sizing: border-box;
 	text-align: left;
-	padding-top: 29px;
+	padding-top: 28px;
 	padding-left: 42px;
 }
 
