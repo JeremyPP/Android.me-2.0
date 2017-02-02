@@ -1,0 +1,131 @@
+
+
+
+/* ========== Main Styles ========== */
+
+body {
+	background: #EFF3F6;
+}
+
+
+
+/* ========== Header image (Logo) ========== */
+
+.large-logo-header {
+	background: #6472cd;
+	width: 100%;
+	height: 280px;
+	margin-top: 64px;
+	position: relative;
+}
+
+.large-logo-header img {
+	position: absolute;
+	width: 260px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: 86px;
+}
+
+
+
+/* ========== Containers ========== */
+
+.main-container {
+	width: 100%;
+}
+
+.article-cards-container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+
+/* ========== Filters ========== */
+
+.filter-container {
+	min-height: 48px;
+	width: 960px;
+	background: #E0E0E0;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+
+
+/* ========== News list (Cards) ========== */
+
+.card-list {
+	width: 100%;
+}
+
+.news-col  {
+	float: left;
+	width: 320px;
+}
+
+.news-card {
+	background: #fff;
+	width: 300px;
+	margin: 10px 10px;
+	position: relative;
+	float: left;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.15);
+	transition: all 0.2s ease-in-out;
+}
+
+.news-card:hover {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+ }
+ 
+ .news-card h1 {
+	margin: 0;
+	padding: 16px;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.84);
+ }
+ 
+ .news-img {
+	 width: 100%;
+ }
+ 
+.news-content-preview {
+	padding: 16px;
+	margin: 0;
+	margin-top: -4px;
+	font-size: 14px;
+	line-height: 18px;
+	color: rgba(0, 0, 0, 0.52);
+	font-weight: 500;
+}
+
+.news-info {
+	text-align: right;
+	margin: 0 8px;
+	padding: 8px 0;
+	border-top: 1px solid #EEEEEE;
+	color: rgba(0, 0, 0, 0.32);
+}
+
+.news-info span {
+	margin-right: 10px;
+	padding: 2px 5px;
+	font-size: 13px;
+	font-weight: 600;
+	height: 20px;
+	display: inline-block;
+	line-height: 20px;
+}
+
+.news-info span i {
+	font-size: 16px;
+	margin-top: 2px;
+	float: left;
+	padding-right: 4px;
+}
