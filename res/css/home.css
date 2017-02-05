@@ -129,3 +129,16 @@ body {
 	float: left;
 	padding-right: 4px;
 }
+
+
+
+/* ========== Load More Button ========== */
+
+.loadmore-btn-container {
+	background: #e0e0e0;
+	width: 100%;
+	float: left;
+	height: 48px;
+	text-align: center;
+	margin: 15px 0;
+}
