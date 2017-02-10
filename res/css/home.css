@@ -48,14 +48,84 @@ body {
 
 
 
-/* ========== Filters ========== */
+/* ========== Filters (Tag menu) ========== */
 
 .filter-container {
-	min-height: 48px;
+	height: 48px;
 	width: 960px;
-	background: #E0E0E0;
-	padding: 10px;
+	padding: 0 10px;
+	margin: 10px 0 0 0;
 	box-sizing: border-box;
+}
+
+.menuTrigger {
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.54);
+	display: inline-block;
+	height: 48px;
+	padding: 0 16px;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.triggerLabelSelection {
+    height: 48px;
+    float: left;
+	line-height: 48px;
+}
+
+.menuTrigger i {
+    height: 48px;
+    float: left;
+	line-height: 48px;
+	padding-left: 5px;
+}
+
+.tagSelectMenu {
+	position: absolute;
+	z-index: 999;
+	background: white;
+	top: 2px;
+	margin-left: -8px;
+	padding: 8px 0;
+	max-height: calc(50% - 187px);
+	min-width: 168px;
+	overflow: auto;
+	border-radius: 2px;
+	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+	display: none;
+}
+
+.tagSelectMenu::-webkit-scrollbar {
+	width: 5px;
+	background: transparent;
+}
+
+.tagSelectMenu::-webkit-scrollbar-thumb {
+	background: #dcdcdc;
+}
+
+.tagsMenuItem {
+	height: 48px;
+	padding: 0 24px;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.84);
+	box-sizing: border-box;
+	line-height: 48px;
+	cursor: pointer;
+}
+
+.tagsMenuItem:hover {
+	background: #eee;
+}
+
+.tagsMenuItem:active {
+	background: #dcdcdc;
+}
+
+.tagsMenuItem.activeItem {
+	background: #cdcbcc;
+	cursor: default;
 }
 
 
@@ -79,11 +149,20 @@ body {
 	float: left;
 	border-radius: 2px;
 	box-shadow: 0 1px 1px rgba(0,0,0,.15);
-	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.news-card a {
+	text-decoration: none;
+	color: initial;
 }
 
 .news-card:hover {
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
  }
  
  .news-card h1 {
@@ -164,13 +243,16 @@ body {
 	font-weight: 500;
 }
 
-.loadmore-btn-container button:hover,
+.loadmore-btn-container button:hover {
+	background: rgba(0, 0, 0, 0.08);
+}
+
 .loadmore-btn-container button:focus {
-	background: rgba(0, 0, 0, 0.12);
+	background: rgba(0, 0, 0, 0.06);
 }
 
 .loadmore-btn-container button:active {
-	background: rgba(0, 0, 0, 0.24);
+	background: rgba(0, 0, 0, 0.12);
 }
 
 
