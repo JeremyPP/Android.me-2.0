@@ -175,19 +175,52 @@ body {
 /* ========== Page Footer ========== */
 
 .page-footer {
-    background: #494e52;
-    color: #fff;
-    width: 100%;
-    height: 96px;
+	background: #494e52;
+	width: 100%;
+	height: 96px;
+}
+
+.copyright,
+.footerLinks {
+	float: left;
+	width: calc(50% - 2px);
 }
 
 .page-footer .copyright {
-    line-height: 96px;
-    font-weight: 400;
-    font-size: 12px;
-    text-align: right;
-    margin-right: 85px;
+	color: rgba(255, 255, 255, 0.24);
+	margin-top: 28px;
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.page-footer .copyright,
+.page-footer .footerLinks {
+	font-weight: 400;
+	padding: 0 84px;
+	box-sizing: border-box;
+}
+
+.page-footer .footerLinks {
+	color: rgba(255, 255, 255, 0.12);
+	text-align: right;
+	margin-top: 39px;
+	font-size: 14px;
+}
+
+.page-footer .footerLinks a {
+	padding: 12px;
 	color: rgba(255, 255, 255, 0.36);
+	text-decoration: none;
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-ms-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+}
+
+.page-footer .footerLinks a:hover {
+	color: rgba(255, 255, 255, 0.64);
+	cursor: pointer;
 }
 
 
