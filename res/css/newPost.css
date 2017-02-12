@@ -1,40 +1,4 @@
-﻿/* ========== Inport Fonts ========== */
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url(../font/Roboto-Light.ttf) format('ttf');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(../font/Roboto-Regular.ttf) format('ttf');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(../font/Roboto-Bold.ttf) format('ttf');
-}
-
-
-/* ========== Main Styles ========== */
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    background-color: #e5e5e5;
-}
-
+﻿
 
 /* ========== Elements styles ========== */
 
@@ -47,17 +11,23 @@ header .cancel-post {
     line-height: 64px;
     text-transform: uppercase;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 2px;
     top: 0;
     z-index: 500;
     height: 64px;
     max-height: 64px;
-    cursor: pointer;
+	cursor: pointer;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
 }
 
 header .cancel-post:hover {
-    background: #E4165A;
+    background: #D81B60;
 }
 
 section.new-post-main-container {
@@ -70,62 +40,61 @@ section.new-post-main-container {
 }
 
 section.new-post-main-container h1 {
-    font-size: 17px;
-    font-weight: 500;
-    font-family: Roboto medium;
-    text-transform: uppercase;
-    color: #AAAAAA;
-    padding: 20px 30px 20px 30px;
+	font-size: 16px;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.36);
+	height: 48px;
+	line-height: 48px;
+	text-align: right;
+	padding-right: 15px;
+	border-radius: 2px;
 }
 
 .new-article #post-title {
-    font-family: Roboto, sans-serif;
-    width: 100%;
-    max-width: calc(100% - 60px);
-    height: 104px;
-    border: none;
-    outline: none;
-    text-align: center;
-    font-weight: 400;
-    font-size: 49px;
-    line-height: 52px;
-    color: #555;
-    padding: 20px 30px 20px 30px;
-    margin-bottom: 10px;
-    background: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    resize: none;
+	font-family: Roboto, sans-serif;
+	width: 100%;
+	max-width: 100%;
+	height: 144px;
+	outline: none;
+	text-align: center;
+	color: #555;
+	padding: 15px 15px;
+	margin-bottom: 10px;
+	background: #fff;
+	resize: none;
+	border: 1px solid #E0E0E0;
+	border-radius: 2px;
+	box-sizing: border-box;
+	font-weight: 300;
+	font-size: 44px;
+	line-height: 56px;
 }
 
 .new-article .post-author-label,
 .new-article .post-tags-label {
-    font-size: 17px;
-    font-weight: 500;
-    font-family: Roboto medium;
-    text-transform: uppercase;
-    color: #AAAAAA;
-    text-align: right;
-    line-height: 42px;
-    margin: 25px 0 15px 0;
-    padding: 0 20px 0 20px;
+	text-align: right;
+	line-height: 42px;
+	margin: 25px 0 15px 0;
+	padding: 0 15px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #9E9E9E;
 }
 
 .new-article #post-author,
 .new-article #post-tags {
-    color: #6472cd;
-    border: none;
-    outline: none;
-    height: 35px;
-    padding-left: 20px;
-    font-size: 17px;
-    font-weight: 500;
-    font-family: Roboto medium;
-    text-transform: uppercase;
-    margin-right: 20px;
-    background: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+	font-family: Roboto, sans-serif;
+	color: #6472cd;
+	outline: none;
+	height: 35px;
+	padding-left: 15px;
+	margin-right: 20px;
+	background: #fff;
+	border: 1px solid #E0E0E0;
+	border-radius: 2px;
+	font-size: 14px;
+	font-weight: 500;
+	width: 20%;
 }
 
 .new-article #post-tags  {
@@ -135,17 +104,16 @@ section.new-post-main-container h1 {
 .new-article #post-source-name,
 .new-article #post-source-url {
     color: #03a9f4;
-    border: none;
     outline: none;
     height: 35px;
     padding-left: 20px;
     font-size: 17px;
     font-weight: 500;
-    font-family: Roboto medium;
     margin-right: 20px;
     background: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+	border: 1px solid #E0E0E0;
+	border-radius: 2px;
+	width: 20%;
 }
 
 .new-article #post-title:focus,
@@ -154,43 +122,38 @@ section.new-post-main-container h1 {
 .new-article #post-source-name:focus,
 .new-article #post-source-url:focus,
 .new-article #post-content:focus {
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-    -webkit-transition: all 150ms ease-in-out;
-    -moz-transition: all 150ms ease-in-out;
-    -ms-transition: all 150ms ease-in-out;
-    -o-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
+	border-color: #4FC3F7;
 }
 
 .new-article #post-source-url {
-    width: 471px;
+    width: calc(80% - 156px);
     margin-right: 0;
 }
 
 .new-article #post-tags {
-    width: 411px;
-    margin-right: 0;
+	width: calc(80% - 180px);
+	margin-right: 0;
+	color: #29d3e8;
+	font-size: 13px;
 }
 
 .new-article label.post-img-label {
-    display: inline-block;
-    overflow: hidden;
-    cursor: pointer;
-    text-align: center;
-    font-family: Roboto Medium, sans-serif;
-    color: #FFFFFF;
-    height: 44px;
-    line-height: 44px;
-    width: auto;
-    font-size: 14px;
-    margin-top: 15px;
-    margin-bottom: 17px;
-    background: #9A9A9A;
-    border-radius: 2px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    padding: 0 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
+	text-align: center;
+	color: #FFFFFF;
+	height: 36px;
+	line-height: 36px;
+	width: auto;
+	font-size: 14px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	background: #607D8B;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+	padding: 0 24px;
+	text-transform: uppercase;
 }
 
 .new-article label.post-img-label input {
@@ -204,10 +167,9 @@ section.new-post-main-container h1 {
 }
 
 .new-article #post-content {
-    border: none;
     outline: none;
     width: 100%;
-    max-width: calc(100% - 60px);
+    max-width: 100%;
     height: 300px;
     padding: 30px;
     font-size: 19px;
@@ -216,41 +178,45 @@ section.new-post-main-container h1 {
     font-family: Roboto, sans-serif;
     margin-bottom: 15px;
     background: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+    border: 1px solid #E0E0E0;
+	border-radius: 2px;
+	box-sizing: border-box;
 }
 
 .new-article .post-source-label {
     color: #8A8A8A;
-    font-size: 17px;
-    font-family: Roboto Medium, sans-serif;
-    padding: 0 10px 0 30px;
+    font-size: 16px;
+	padding: 0 15px;
 }
 
-.new-article #post-preview {
-    margin-top: 30px;
-    float: right;
-    border: none;
-    outline: none;
-    background-color: #12C4CA;
-    height: 44px;
-    padding: 0 20px 0 20px;
-    color: #fff;
-    border-radius: 4px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 12px;
-    cursor: pointer;
-    letter-spacing: 1px;
+.new-article #post-publish {
+	margin-top: 30px;
+	font-family: 'Roboto', sans-serif;
+	float: right;
+	border: none;
+	outline: none;
+	background-color: #29d3e8;
+	height: 36px;
+	padding: 0 24px;
+	color: #fff;
+	border-radius: 2px;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 14px;
+	cursor: pointer;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
 }
 
-.new-article #post-preview:hover {
-    -webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,0.27);
-    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.27);
+.new-article #post-publish:hover {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	background: #00BCD4;
 }
 
 .image-preview {
     margin-bottom: 20px;
-    margin-top: -4px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }

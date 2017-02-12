@@ -5,11 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="favicon.ico">
 
+		<!-- Main style -->
+        <link rel="stylesheet" href="res/css/style.css">
+        
         <!-- Page style -->
         <link rel="stylesheet" href="res/css/newPost.css">
         
-         <!-- Import jQuery (from Google) --> 
+        <!-- Import jQuery (from Google) --> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		<!-- Import Material Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<!-- Import Roboto font (Google font) -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
         
         <!-- Page info -->
         <title>New post | Android.me</title>
@@ -22,7 +31,7 @@
         <section class="new-post-main-container">
             
             <!-- Display future ID that will be given to the new post -->
-            <h1>New post - id: 488</h1>
+            <h1>New post id: 488</h1>
     
             <div class="new-article">
                 <form action="post.php" method="post" enctype="multipart/form-data">
@@ -32,7 +41,7 @@
                     
                     <!-- Author section -->
                     <label class="post-author-label">By:</label>
-                    <input id="post-author" name="writer" type="text" placeholder="Jérémy" required />
+                    <input id="post-author" name="writer" type="text" placeholder="Jérémy Pougnet" required />
                     
                     <!-- Tags section -->
                     <label class="post-tags-label">Tags:</label>
@@ -53,22 +62,13 @@
                     <input id="post-source-name" name="from" type="text" placeholder="The Verge" required />
                     <input id="post-source-url" name="from" type="text" placeholder="http://theverge.com" required />
                     
-                    <!-- Submit form & Create "preview" article -->
-                    <input id="post-preview" type="submit" value="Next (Preview)"/>
+                    <!-- Submit form publish article -->
+                    <input id="post-publish" type="submit" value="Publish"/>
                 </form>
             </div>
         </section>
         
         <script>
-        
-            //cancel button shadow on scroll
-            $(window).scroll(function() {
-                if($(window).scrollTop() > 2) {
-                    $(".cancel-post").css('box-shadow', '0 2px 5px rgba(0,0,0,.26)');
-                } else{
-                    $(".cancel-post").css('box-shadow', 'none');
-                }
-            });
             
             // display selected image and image path before upload
             function get_filename(obj) {
@@ -80,3 +80,24 @@
         </script>
     </body>
 </html>
+
+
+<!-- =====================
+
+
+W.I.P / TO-DO:
+
+- Make it responsive;
+- Help / Instructions (Sublabels?);
+- Multiple Sources (Sources are optional);
+- 
+
+
+OTHER IDEAS (later):
+
+- Preview mode before publishing;
+- Better tag selection (and tags management);
+- 
+
+
+===================== -->
