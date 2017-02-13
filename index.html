@@ -29,7 +29,7 @@
     <body>
     
         <!-- Top header bar (menu) -->
-        <header class="page-header no-shadow">
+        <header class="page-header">
         
             <!-- Elements for the responsive menu -->
             <div class="resp-menu-ico">
@@ -41,10 +41,8 @@
             <div class="resp-name-logo">Android.me</div>
         
             <!-- Android.me logo -->
-            <div class="ndroidme-logo" style="display:none;">
-                <a href="http://ndroidme.com">
-                    <img src="res/img/logo.png" alt="Android.me logo">
-                </a>
+            <div class="ndroidme-logo">
+				<img src="res/img/logo.png" alt="Android.me logo">
             </div>
             
             <!-- nav menu -->
@@ -68,12 +66,33 @@
 			<img src="res/img/logo_large.png" alt="">
 		</section>
 		
+		<!-- Top banner section v2 -->
+		<section class="headerBannerHero">
+			<div class="topBannerCOntentContainer">
+				<h1>Experience the News like never before.</h1>
+				<p>A new way to stay informed and explore the world of Google's
+				mobile platform. Be part of this amazing community!</p>
+				<div class="bannerCtaButtons">
+					<a href="" class="ctaOne">
+						<div>Join Now</div>
+					</a>
+					<a href="" class="ctaTwo">
+						<div>Learn more</div>
+					</a>
+				</div>
+			</div>
+			<div class="topColorOverlay"></div>
+		</section>
+		
 		<!-- Article cards container -->
         <section class="main-container">
 			<div class="article-cards-container">
 				
 				<!--  -->
 				<div class="filter-container">
+					
+					<div class="latestInfoTitle">Latest News</div>
+				
 					<div class="menuTrigger">
 						<div class="triggerLabelSelection">All tags</div>
 						<i class="material-icons">arrow_drop_down</i>
@@ -112,9 +131,8 @@
 						
 						<div class="news-card">
 							<a href="article.html">
-								<h1>The fingerprint company that Samsung never bought is now everywhere</h1>
 								<img class="news-img" src="articles_images/previews/The_fingerprint_company_that_Samsung_never_bought_is_now_everywhere.png" alt="">
-								<div class="news-content-preview">Two years ago, a press release was posted to the website of Fingerprint Cards AB, announcing that...</div>
+								<h1>The fingerprint company that Samsung never bought is now everywhere</h1>
 								<div class="news-info">
 									<span><i class="material-icons">visibility</i> 2K</span>
 									<span><i class="material-icons">comment</i> 14</span>
@@ -125,9 +143,8 @@
 						
 						<div class="news-card">
 							<a href="">
-								<h1>Google is on the brink of AI capable of natural conversation</h1>
 								<img class="news-img" src="articles_images/previews/Google_is_on_the_brink_of_AI_capable_of_natural_conversation.png" alt="">
-								<div class="news-content-preview">Artificial intelligence that can emulate human reasoning and even emotions is within Google’s rea...</div>
+								<h1>Google is on the brink of AI capable of natural conversation</h1>
 								<div class="news-info">
 									<span><i class="material-icons">visibility</i> 5.2K</span>
 									<span><i class="material-icons">comment</i> 23</span>
@@ -144,9 +161,8 @@
 						
 						<div class="news-card">
 							<a href="">
-								<h1>Motorola Announces Moto X Style, Moto X Play, and Moto G (3rd Gen)</h1>
 								<img class="news-img" src="articles_images/previews/Motorola_Announces_Moto_X_Style_ Moto_X_Play_and_Moto_G_(3rd_Gen).png" alt="">
-								<div class="news-content-preview">Motorola took the stage in multiple cities this morning, announcing three new smartphones for the...</div>
+								<h1>Motorola Announces Moto X Style, Moto X Play, and Moto G (3rd Gen)</h1>
 								<div class="news-info">
 									<span><i class="material-icons">visibility</i> 3.6K</span>
 									<span><i class="material-icons">comment</i> 3</span>
@@ -157,9 +173,8 @@
 						
 						<div class="news-card">
 							<a href="">
-								<h1>Google Glass isn't dead, it's being 'made ready for users,' says Eric Schmidt</h1>
 								<img class="news-img" src="articles_images/previews/Google_Glass_isnt_dead_its_being_made_ready_for_users_says_Eric_Schmidt.png" alt="">
-								<div class="news-content-preview">After Google stopped selling its wearable Glass device in January this year, many people speculat...</div>
+								<h1>Google Glass isn't dead, it's being 'made ready for users,' says Eric Schmidt</h1>
 								<div class="news-info">
 									<span><i class="material-icons">visibility</i> 6.4K</span>
 									<span><i class="material-icons">comment</i> 10</span>
@@ -176,9 +191,8 @@
 					
 						<div class="news-card">
 							<a href="">
-								<h1>Google's new self-driving cars hit streets of Mountain View</h1>
 								<img class="news-img" src="articles_images/previews/Googlesnew_selfdriving_cars_hit_streets_of_Mountain_View.png" alt="">
-								<div class="news-content-preview">Google took another step toward taking self-driving cars mainstream on Thursday, after the compan...</div>
+								<h1>Google's new self-driving cars hit streets of Mountain View</h1>
 								<div class="news-info">
 									<span><i class="material-icons">visibility</i> 3K</span>
 									<span><i class="material-icons">comment</i> 11</span>
@@ -189,9 +203,8 @@
 						
 						<div class="news-card">
 							<a href="">
-								<h1>Korea report: LG G4 to come with a curved display</h1>
 								<img class="news-img" src="articles_images/previews/Korea_report_LG_G4_to_come_with_a_curved_display.png" alt="">
-								<div class="news-content-preview">We have just had our first leaked glimpse at what might be LG’s G4, or perhaps the rumored G4 Not...</div>
+								<h1>Korea report: LG G4 to come with a curved display</h1>
 								<div class="news-info">
 									<span><i class="material-icons">visibility</i> 7.1K</span>
 									<span><i class="material-icons">comment</i> 20</span>
@@ -224,19 +237,6 @@
         <script src="res/js/main.js"></script>
 		
 		<script>
-
-			$(window).scroll(function() {
-				if($(window).scrollTop() > 220) {
-					$(".ndroidme-logo").fadeIn(300);
-				} else{
-					$(".ndroidme-logo").fadeOut(100);
-				}
-				if($(window).scrollTop() > 280) {
-					$(".page-header").removeClass("no-shadow");
-				} else{
-					$(".page-header").addClass("no-shadow");
-				}
-			});
 			
 			
 			// Tag selection menu
