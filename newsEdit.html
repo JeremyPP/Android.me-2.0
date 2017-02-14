@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico">
+
+		<!-- Main style -->
+        <link rel="stylesheet" href="res/css/style.css">
+        
+        <!-- Page style -->
+        <link rel="stylesheet" href="res/css/newsEdit.css">
+        
+        <!-- Import jQuery (from Google) --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		<!-- Import Material Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<!-- Import Roboto font (Google font) -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        
+        <!-- Page info -->
+        <title>Edit | Article id:448</title>
+    </head>
+    <body>
+        <header>
+            <a href="javascript:history.back()"><div class="cancel-post">cancel</div></a>
+        </header>
+    
+        <section class="new-post-main-container">
+    
+            <div class="new-article">
+                <form action="post.php" method="post" enctype="multipart/form-data">
+                
+                    <!-- Title section -->
+					<div class="topSection">
+						<textarea id="post-title" name="title" type="text" placeholder="Article Title" required autofocus />It's Apple's fault that the Nexus 6 doesn't have a fingerprint sensor</textarea>
+                    </div>
+					
+                    <!-- Author & Tag section -->
+					<div class="article-info">
+						By&nbsp;
+						<a>Jérémy Pougnet</a>
+						&nbsp;&nbsp;|&nbsp;&nbsp;Posted:&nbsp;
+						<a>Mon, Jan 26, 2015</a>
+						&nbsp;&nbsp;|&nbsp;&nbsp;Tags:&nbsp;
+						<span><a class="news_tags" href="#" tag="NEXUS">NEXUS <i class="material-icons">remove_circle</i></a></span>
+						<a class="news_tags" href="#" tag="OTHERS">APPLE <i class="material-icons">remove_circle</i></a>
+						<a class="news_tags" href="#" tag="MOTOROLA">MOTOROLA <i class="material-icons">remove_circle</i></a>
+					</div>
+				   
+                    <!-- Main image -->
+                    <img class="" src="articles_images/It's_Apple's_fault_that_the_Nexus_6_doesn't_have_a_fingerprint_sensor.jpg" width="840"/>
+                    
+                    <!-- Article content section -->
+                    <textarea id="post-content-edit" name="content" type="text" placeholder="Lorem ipsum dolor sit amet, putant accusa..." required />Former Motorola CEO Dennis Woodside has confessed that the dimple at the back of the Nexus 6 was originally intended to play host to a fingerprint sensor.
+
+Back in 2011, Motorola was a pioneer in bringing fingerprint recognition to its Atrix 4G smartphone, however the company it used then, Authentec, was purchased by Apple a year later for a price of $356 million. Authentec were, in Woodside's judgment, the best supplier around and "the second best supplier was the only one available to everyone else in the industry and they weren’t there yet." So, with Apple snatching up the best and the rest not being good enough, the Nexus 6 was left without biometric authentication.
+
+The decision not to implement a second-rate fingerprint sensor was probably the right one for Motorola and Google. Devices like the HTC One max have shown what the alternative is: a slow and buggy experience that puts users off trying to use the feature at all. Apple's Touch ID fingerprint scanner, on the other hand, is consistently accurate and fast and sits in a more comfortable spot at the front of the device.
+
+It might have been nice to see that same functionality in the Google/Motorola Nexus 6 as well, but that exclusivity over the best technology in the market is what Apple paid millions of dollars for.</textarea>
+                    
+                    <!-- From/Via section -->
+                    
+					
+                    <!-- Save changes -->
+                    <input id="" type="submit" value="Save"/>
+                </form>
+            </div>
+        </section>
+		
+		<script>
+			element = document.getElementById("post-content-edit");
+			element.style.height = "1px";
+			element.style.height = 10 + (element.scrollHeight)+"px";
+		</script>
+
+    </body>
+</html>
+
+
+<!-- =====================
+
+
+W.I.P / TO-DO:
+
+- Edit guidelines are the same as Post guidelines!
+- Custom scroll bar on textareas
+- improve tag deletion UI
+- Responsve
+- Source edition
+- 
+
+
+OTHER IDEAS (later):
+
+- Add a new tag?
+- 
+
+
+===================== -->

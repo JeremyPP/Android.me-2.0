@@ -61,6 +61,11 @@
 	user-select: none;
 }
 
+.editArticleBtn a {
+	color: #FFEB3B;
+	text-decoration: none;
+}
+
 .editArticleBtn:hover {
 	background: rgba(255, 255, 255, 0.1);
 	cursor: pointer;
