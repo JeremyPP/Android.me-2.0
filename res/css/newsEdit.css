@@ -122,8 +122,8 @@ section.new-post-main-container {
     max-width: 100%;
     fmin-height: 360px;
     padding: 30px;
-    font-size: 19px;
-    line-height: 1.352;
+    font-size: 18px;
+	line-height: 30px;
     color: #333;
     font-family: Roboto, sans-serif;
     margin: 15px 0;

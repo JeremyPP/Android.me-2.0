@@ -273,10 +273,10 @@
 }
 
 .article-content p {
-    margin: 0 0 25px 0;
-    text-align: left;
-    font-size: 19px;
-    line-height: 28.5px;
+	margin: 0 0 25px 0;
+	text-align: left;
+	font-size: 18px;
+	line-height: 30px;
 }
 
 
@@ -361,9 +361,12 @@
 /* ========== Comments ========== */
 
 .comment-section {
-    background: #fff;
-    width: 100%;
-    min-height: 300px;
+	background: #fff;
+	width: 100%;
+	min-height: 300px;
+	max-width: 840px;
+	margin: 0 auto;
+	margin-bottom: 30px;
 }
 
 
