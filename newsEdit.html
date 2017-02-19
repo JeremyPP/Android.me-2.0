@@ -52,7 +52,7 @@
 					</div>
 				   
                     <!-- Main image -->
-                    <img class="" src="articles_images/It's_Apple's_fault_that_the_Nexus_6_doesn't_have_a_fingerprint_sensor.jpg" width="840"/>
+                    <img class="articleEditImg" src="articles_images/It's_Apple's_fault_that_the_Nexus_6_doesn't_have_a_fingerprint_sensor.jpg"/>
                     
                     <!-- Article content section -->
                     <textarea id="post-content-edit" name="content" type="text" placeholder="Lorem ipsum dolor sit amet, putant accusa..." required />Former Motorola CEO Dennis Woodside has confessed that the dimple at the back of the Nexus 6 was originally intended to play host to a fingerprint sensor.
@@ -64,13 +64,12 @@ The decision not to implement a second-rate fingerprint sensor was probably the 
 It might have been nice to see that same functionality in the Google/Motorola Nexus 6 as well, but that exclusivity over the best technology in the market is what Apple paid millions of dollars for.</textarea>
                     
                     <!-- From/Via section -->
-                    <div class="sourceEditContainer">
-						<div class="fromvia">
-							Source:&nbsp;
-							<span href="#" class="openEditSourceModal">The Verge <i class="material-icons">edit</i></span>
-							<span href="#">Google <i class="material-icons">edit</i></span>
-							<span class="addSource addDisabled" href=""><i class="material-icons">add_circle</i></span>
-						</div>
+					<div class="sourceEditContainer">
+						<label class="fromvia">Source:</label>
+						<input id="post-source-name" name="from" type="text" spellcheck="false" value="The Verge" placeholder="Name Source 1"/>
+						<input id="post-source-url" name="from" type="text" spellcheck="false" value="http://www.theverge.com/2015/1/26/7904907/nexus-6-no-fingerprint-sensor-because-of-apple" placeholder="URL Source 1"/>
+						<input id="post-source-name" class="source2Name" spellcheck="false" name="from" type="text" value="" placeholder="Name Source 2"/>
+						<input id="post-source-url" name="from" type="text" spellcheck="false" value="" placeholder="URL Source 2"/>
 					</div>
 					
                     <!-- Save changes -->
@@ -80,8 +79,7 @@ It might have been nice to see that same functionality in the Google/Motorola Ne
         </section>
 		
 		<!-- Source edition modal -->
-		<!-- Demo only -->
-		<div class="editSourceModalOverlay">
+		<!--<div class="editSourceModalOverlay">
 			<div class="editSourceModal modal">
 				<h1>Edit Source 1</h1>
 				<div class="modalContainer">
@@ -93,7 +91,7 @@ It might have been nice to see that same functionality in the Google/Motorola Ne
 					<div class="modalActionBtn">Save</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		
 		<script>
 			$(window, document, undefined).ready(function() {
@@ -107,7 +105,7 @@ It might have been nice to see that same functionality in the Google/Motorola Ne
 				element2.style.height = 2 + (element2.scrollHeight)+"px";
 
 	  
-				// Show overlay & Open modal
+				/*// Show overlay & Open modal
 				// FOR DEMO PURPOSES ONLY! must have different modal implementation
 				$(".closeModalBtn").click(function() {
 					$(".editSourceModalOverlay").fadeOut(200);
@@ -117,7 +115,7 @@ It might have been nice to see that same functionality in the Google/Motorola Ne
 				});
 				$(".editSourceModal").click(function(event) {
 					event.stopPropagation();
-				});
+				});*/
 
 			});
 		</script>
@@ -132,8 +130,7 @@ It might have been nice to see that same functionality in the Google/Motorola Ne
 W.I.P / TO-DO:
 
 - Edit guidelines are the same as Post guidelines!
-- Responsve
-- Delete existing source
+- Responsve (WIP)
 - Add a new tag?
 - 
 

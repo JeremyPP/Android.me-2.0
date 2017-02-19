@@ -25,7 +25,7 @@
     </head>
     <body>
         <header>
-            <div class="cancel-post">cancel</div>
+            <a href="#"><div class="cancel-post">cancel</div></a>
         </header>
     
         <section class="new-post-main-container">
@@ -37,7 +37,7 @@
                 <form action="post.php" method="post" enctype="multipart/form-data">
                 
                     <!-- Title section -->
-                    <textarea id="post-title" name="title" type="text" placeholder="Article Title" required /></textarea>
+                    <textarea id="post-title" name="title" type="text" placeholder="Article Title" autofocus required /></textarea>
                     
                     <!-- Author section -->
                     <label class="post-author-label">By:</label>
@@ -59,8 +59,10 @@
                     
                     <!-- From/Via section -->
                     <label class="post-source-label">Source:</label>
-                    <input id="post-source-name" name="from" type="text" placeholder="The Verge"/>
-                    <input id="post-source-url" name="from" type="text" placeholder="http://theverge.com"/>
+                    <input id="post-source-name" name="from" type="text" placeholder="Name Source 1"/>
+                    <input id="post-source-url" name="from" type="text" placeholder="URL Soure 1"/>
+                    <input id="post-source-name" class="source2Name" name="from" type="text" placeholder="Name Source 2"/>
+                    <input id="post-source-url" name="from" type="text" placeholder="URL Source 2"/>
                     
                     <!-- Submit form and post article (Status: unpublished) -->
                     <input id="post-publish" type="submit" value="Post"/>
@@ -87,15 +89,13 @@
 
 W.I.P / TO-DO:
 
-- Make it responsive;
-- Help / Instructions (Sublabels?);
-- Multiple Sources (Sources are optional);
+- Responsive (WIP);
+- Guidelines / Instructions (Sublabels?);
 - 
 
 
 OTHER IDEAS (later):
 
-- Preview mode before publishing;
 - Better tag selection (and tags management);
 - 
 

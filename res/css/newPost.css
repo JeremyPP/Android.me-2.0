@@ -106,14 +106,19 @@ section.new-post-main-container h1 {
     color: #03a9f4;
     outline: none;
     height: 35px;
-    padding-left: 20px;
+    padding: 0 12px;
     font-size: 17px;
     font-weight: 500;
-    margin-right: 20px;
+    margin-right:12px;
     background: #fff;
 	border: 1px solid #E0E0E0;
 	border-radius: 2px;
 	width: 20%;
+	margin-bottom: 16px;
+}
+
+.new-article #post-source-name.source2Name {
+	margin-left: 73px;
 }
 
 .new-article #post-title:focus,
@@ -126,7 +131,7 @@ section.new-post-main-container h1 {
 }
 
 .new-article #post-source-url {
-    width: calc(80% - 156px);
+    width: calc(80% - 142px);
     margin-right: 0;
 }
 
@@ -138,7 +143,7 @@ section.new-post-main-container h1 {
 }
 
 .new-article label.post-img-label {
-	display: inline-block;
+	display: block;
 	overflow: hidden;
 	cursor: pointer;
 	text-align: center;
@@ -149,7 +154,7 @@ section.new-post-main-container h1 {
 	font-size: 14px;
 	margin-top: 16px;
 	margin-bottom: 16px;
-	background: #607D8B;
+	background: #4FC3F7;
 	border-radius: 2px;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 	padding: 0 24px;
@@ -186,7 +191,7 @@ section.new-post-main-container h1 {
 .new-article .post-source-label {
     color: #8A8A8A;
     font-size: 16px;
-	padding: 0 15px;
+	padding: 0 16px 0 0;
 }
 
 .new-article #post-publish {
@@ -219,4 +224,82 @@ section.new-post-main-container h1 {
 
 .image-preview {
     margin-bottom: 20px;
+}
+
+.new-article textarea::-webkit-scrollbar {
+	width: 9px;
+	background: transparent;
+}
+
+.new-article textarea::-webkit-scrollbar-thumb {
+	background: #dcdcdc;
+	border: 2px solid white;
+}
+
+
+
+/* ========== Media Queries ========== */
+
+@media screen and (max-width: 840px) {
+	
+	section.new-post-main-container {
+		width: 96%;
+	}
+	
+	.new-article #post-author, .new-article #post-tags {
+		width: calc(100% - 71px);
+		margin-right: 0;
+	}
+	
+	.new-article #post-tags {
+		width: calc(100% - 86px);
+		margin-top: 14px;
+	}
+	
+	.image-preview {
+		width: 100%;
+	}
+	
+	.new-article #post-source-name, .new-article #post-source-url {
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 12px;
+		margin-right: 0;
+	}
+	
+	.new-article #post-source-url {
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 0;
+	}
+	
+	.new-article #post-source-name.source2Name {
+		margin-left: 0;
+	}
+	
+	.new-article label.post-img-label {
+		display: block;
+	}
+	
+	.new-article .post-source-label {
+		padding: 0;
+	}
+	
+}
+
+@media screen and (max-width: 600px) {
+	
+	.new-article #post-content {
+		padding: 16px;
+	}
+	
+	.new-article #post-title {
+		font-size: 38px;
+		line-height: 52px;
+	}
+	
+	section.new-post-main-container {
+		padding-bottom: 64px;
+	}
+	
 }
