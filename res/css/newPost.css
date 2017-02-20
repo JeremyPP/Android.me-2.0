@@ -107,7 +107,7 @@ section.new-post-main-container h1 {
     outline: none;
     height: 35px;
     padding: 0 12px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     margin-right:12px;
     background: #fff;
@@ -223,7 +223,7 @@ section.new-post-main-container h1 {
 }
 
 .image-preview {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
 }
 
 .new-article textarea::-webkit-scrollbar {
@@ -234,6 +234,145 @@ section.new-post-main-container h1 {
 .new-article textarea::-webkit-scrollbar-thumb {
 	background: #dcdcdc;
 	border: 2px solid white;
+}
+
+
+
+/* ========== Text editor ========== */
+
+#quill-container {
+	height: auto;
+	min-height: 264px;
+	padding: 18px 15px;
+}
+
+#quill-container p {
+	margin: 0 0 25px 0;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+#quill-container .ql-editor {
+	font-family: 'Roboto', sans-serif;
+}
+
+.ql-editor.ql-blank {
+	min-height: 200px;
+}
+
+.ql-editor.ql-blank::before {
+	color: rgba(0,0,0,0.6);
+	content: attr(data-placeholder);
+	font-style: normal;
+	pointer-events: none;
+	position: absolute;
+	font-size: 19px;
+	font-family: Roboto, sans-serif;
+}
+
+.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+	margin-top: 6px;
+	padding: 5px;
+}
+
+.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+	border-color: #fff;
+}
+
+.ql-snow .ql-color-picker.ql-color .ql-picker-item {
+	border-radius: 20px;
+}
+
+.ql-toolbar.ql-snow .ql-picker-options {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
+.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover {
+	border-color: rgba(255, 255, 255, 0.64);
+	border-width: 2px;
+}
+
+.ql-toolbar.ql-snow {
+	border: none;
+	box-sizing: border-box;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	border-bottom: 1px solid #eaeaea;
+	padding: 12px;
+	padding-left: 24px;
+}
+
+.ql-container.ql-snow {
+	border: none;
+}
+
+
+/*  Editor Container  */
+
+.editContentContainer {
+	max-width: 840px;
+	margin: 0 auto;
+	border: 1px solid #E0E0E0;
+	border-radius: 2px;
+	margin-bottom: 24px;
+	margin-top: 18px;
+	position: relative;
+}
+
+
+
+/* ========== Info popup (tooltip) ========== */
+
+.editContentHelp {
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	right: 13px;
+	top: 13px;
+	color: #FFC107;
+	cursor: pointer;
+}
+
+.editContentHelp i {
+	font-size: 20px;
+}
+
+[data-tooltip]:before {
+    position: absolute;
+    top: 26px;
+    margin-top: 5px;
+    margin-left: -192px;
+    padding: 10px 16px;
+    width: 184px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 3px;
+    background-color: #212121;
+    color: #9E9E9E;
+    content: attr(data-tooltip);
+    font-size: 14px;
+    line-height: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+[data-tooltip]:before, [data-tooltip]:after {
+	visibility: hidden;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	pointer-events: none;
+}
+
+[data-tooltip]:hover:before, [data-tooltip]:hover:after {
+	visibility: visible;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1;
+}
+
+[data-tooltip] {
+	z-index: 2;
+	cursor: pointer;
 }
 
 

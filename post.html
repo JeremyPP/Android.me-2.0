@@ -7,12 +7,18 @@
 
 		<!-- Main style -->
         <link rel="stylesheet" href="res/css/style.css">
+		
+		
+		<link rel="stylesheet" href="http://cdn.quilljs.com/1.2.0/quill.snow.css">
         
         <!-- Page style -->
         <link rel="stylesheet" href="res/css/newPost.css">
         
         <!-- Import jQuery (from Google) --> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		
+		<script src="https://cdn.quilljs.com/1.2.0/quill.js"></script>
 		
 		<!-- Import Material Icons -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -54,9 +60,14 @@
                     </label>
                     <img class="image-preview" src="" width="840" style="display:none;" />
                     
-                    <!-- Article content section -->
-                    <textarea id="post-content" name="content" type="text" placeholder="Lorem ipsum dolor sit amet, putant accusa..." required /></textarea>
-                    
+                    <!-- Article content section -->                    
+					<div class="editContentContainer">
+						<div class="editContentHelp" data-tooltip="Please make sure to read the publisher guidelines before posting for the first time.">
+							<i class="material-icons">info_outline</i>
+						</div>
+						<div id="quill-container"></div>
+					</div>
+					
                     <!-- From/Via section -->
                     <label class="post-source-label">Source:</label>
                     <input id="post-source-name" name="from" type="text" placeholder="Name Source 1"/>
@@ -65,10 +76,14 @@
                     <input id="post-source-url" name="from" type="text" placeholder="URL Source 2"/>
                     
                     <!-- Submit form and post article (Status: unpublished) -->
-                    <input id="post-publish" type="submit" value="Post"/>
+                    <input id="post-publish" type="submit" value="Post" />
                 </form>
+				
             </div>
         </section>
+		
+		<button id="btn1" onClick="showContentHTML()">Get HTML data from editor</button>
+
         
         <script>
             
@@ -79,6 +94,27 @@
                 var tmppath = URL.createObjectURL(event.target.files[0]);
                 $(".image-preview").fadeIn("fast").attr('src',URL.createObjectURL(event.target.files[0]));
             }
+			
+			var quill = new Quill('#quill-container', {
+				modules: {
+					toolbar: [
+						['bold', 'italic', 'underline', 'strike'],
+						[{ 'color': [ '#E91E63', '#6472cd', '#03A9F4', '#00BCD4', '#FFC107', '#E0E0E0', '#333' ] }], 
+						['blockquote'],
+						['link', 'image', 'video'],
+						['clean']
+					]
+				},
+				placeholder: 'Article content...',
+				theme: 'snow'
+			});
+			
+			//display current HTML (dev test)
+			function showContentHTML() {
+				var html = quill.root.innerHTML;
+				alert(html);
+			}
+			
         </script>
     </body>
 </html>
@@ -89,14 +125,9 @@
 
 W.I.P / TO-DO:
 
-- Responsive (WIP);
-- Guidelines / Instructions (Sublabels?);
-- 
-
-
-OTHER IDEAS (later):
-
-- Better tag selection (and tags management);
+- Improve Editor (custom styles);
+- Guidelines / Instructions (separate page / article example as placeholder on editor / ... ?);
+- find other solution for main image selection (better UX);
 - 
 
 
