@@ -250,6 +250,13 @@ section.new-post-main-container h1 {
 	margin: 0 0 25px 0;
 	font-size: 18px;
 	line-height: 30px;
+	color: #333;
+}
+
+.ql-snow .ql-editor a {
+	text-decoration: none;
+	color: #03A9F4;
+	cursor: pointer;
 }
 
 #quill-container .ql-editor {
@@ -261,7 +268,7 @@ section.new-post-main-container h1 {
 }
 
 .ql-editor.ql-blank::before {
-	color: rgba(0,0,0,0.6);
+	color: #a9a9a9;
 	content: attr(data-placeholder);
 	font-style: normal;
 	pointer-events: none;
@@ -287,6 +294,10 @@ section.new-post-main-container h1 {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.ql-snow .ql-color-picker .ql-picker-options {
+    width: 180px;
+}
+
 .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
 .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover {
 	border-color: rgba(255, 255, 255, 0.64);
@@ -300,6 +311,42 @@ section.new-post-main-container h1 {
 	border-bottom: 1px solid #eaeaea;
 	padding: 12px;
 	padding-left: 24px;
+}
+
+.ql-snow .ql-tooltip {
+	padding: 9px 16px;
+	border-radius: 2px;
+}
+
+.ql-snow .ql-tooltip input[type=text] {
+	border: 1px solid #e0e0e0;
+	height: 28px;
+	padding: 4px 6px;
+	width: 180px;
+	margin: 0 6px;
+}
+
+.ql-snow .ql-tooltip a.ql-action::after {
+	margin-right: 8px;
+	margin-left: 8px;
+}
+
+.ql-snow .ql-tooltip a.ql-preview {
+	text-decoration: underline;
+}
+
+.ql-snow .ql-tooltip a {
+    display: inline-block;
+    box-sizing: border-box;
+	margin-left: 8px;
+}
+
+.ql-snow .ql-tooltip a.ql-remove::before {
+	margin-left: -8px;
+}
+
+.ql-snow .ql-color-picker .ql-picker-item {
+    margin: 4px;
 }
 
 .ql-container.ql-snow {
