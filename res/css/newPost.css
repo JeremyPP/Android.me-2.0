@@ -101,6 +101,27 @@ section.new-post-main-container h1 {
     text-transform: none !important;
 }
 
+.addTagsBtn {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 10px 16px;
+	color: #4fc3f7;
+	font-weight: 500;
+	margin-left: 8px;
+	border-radius: 2px;
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
+.addTagsBtn:hover {
+    background: rgba(100, 199, 243, 0.12);
+    cursor: pointer;
+}
+
 .new-article #post-source-name,
 .new-article #post-source-url {
     color: #03a9f4;
@@ -147,18 +168,17 @@ section.new-post-main-container h1 {
 	overflow: hidden;
 	cursor: pointer;
 	text-align: center;
-	color: #FFFFFF;
+	color: #757575;
 	height: 36px;
 	line-height: 36px;
 	width: auto;
 	font-size: 14px;
 	margin-top: 16px;
 	margin-bottom: 16px;
-	background: #4FC3F7;
 	border-radius: 2px;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 	padding: 0 24px;
 	text-transform: uppercase;
+	border: 1px dashed #eaeaea;
 }
 
 .new-article label.post-img-label input {
@@ -195,7 +215,7 @@ section.new-post-main-container h1 {
 }
 
 .new-article #post-publish {
-	margin-top: 30px;
+	margin-top: 15px;
 	font-family: 'Roboto', sans-serif;
 	float: right;
 	border: none;
@@ -251,6 +271,10 @@ section.new-post-main-container h1 {
 	font-size: 18px;
 	line-height: 30px;
 	color: #333;
+}
+
+#quill-container p:last-child {
+	margin: 0;
 }
 
 .ql-editor .ql-video {

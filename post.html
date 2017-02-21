@@ -43,7 +43,7 @@
                 <form action="post.php" method="post" enctype="multipart/form-data">
                 
                     <!-- Title section -->
-                    <textarea id="post-title" name="title" type="text" placeholder="Article Title" autofocus required /></textarea>
+                    <textarea id="post-title" name="title" type="text" placeholder="Article Title" required /></textarea>
                     
                     <!-- Author section -->
                     <label class="post-author-label">By:</label>
@@ -51,7 +51,9 @@
                     
                     <!-- Tags section -->
                     <label class="post-tags-label">Tags:</label>
-                    <input id="post-tags" name="tags" type="text" placeholder="NEXUS OTHERS LG" required />
+					<div class="addTagsBtn">
+						Add tags
+					</div>
                     
                     <!-- Main image section -->
                     <label class="post-img-label">
@@ -71,7 +73,7 @@
                     <!-- From/Via section -->
                     <label class="post-source-label">Source:</label>
                     <input id="post-source-name" name="from" type="text" placeholder="Name Source 1"/>
-                    <input id="post-source-url" name="from" type="text" placeholder="URL Soure 1"/>
+                    <input id="post-source-url" name="from" type="text" placeholder="URL Source 1"/>
                     <input id="post-source-name" class="source2Name" name="from" type="text" placeholder="Name Source 2"/>
                     <input id="post-source-url" name="from" type="text" placeholder="URL Source 2"/>
                     
@@ -126,6 +128,7 @@
 W.I.P / TO-DO:
 
 - Continue to improve Editor (custom styles) - Minor;
+- Blue outline on editor when focus;
 - Guidelines / Instructions (separate page / article example as placeholder on editor / ... ?);
 - find other solution for main image selection (better UX);
 - 
