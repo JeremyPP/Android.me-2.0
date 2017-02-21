@@ -399,18 +399,19 @@
 	top: 37px;
 	left: 50%;
 	margin-top: 5px;
-	margin-left: -120px;
-	padding: 10px;
-	width: 130px;
+	margin-left: -142px;
+	padding: 10px 16px;
+	width: 182px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 3px;
 	background-color: #212121;
-	color: #fff;
+	color: #9E9E9E;
 	content: attr(data-tooltip);
-	text-align: center;
-	font-size: 13px;
-	line-height: 16px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 
