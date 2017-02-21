@@ -253,6 +253,25 @@ section.new-post-main-container h1 {
 	color: #333;
 }
 
+.ql-editor .ql-video {
+	width: 778px;
+	height: 438px;
+	margin-bottom: 25px;
+}
+
+.ql-snow .ql-editor blockquote {
+	margin-bottom: 0;
+	margin-top: 0;
+	margin: 0 0 25px 0;
+	font-size: 18px;
+	line-height: 30px;
+	color: rgba(0, 0, 0, 0.64);
+}
+
+.ql-snow a {
+	color: #03A9F4;
+}
+
 .ql-snow .ql-editor a {
 	text-decoration: none;
 	color: #03A9F4;
@@ -291,11 +310,11 @@ section.new-post-main-container h1 {
 }
 
 .ql-toolbar.ql-snow .ql-picker-options {
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 5px #ddd;
 }
 
 .ql-snow .ql-color-picker .ql-picker-options {
-    width: 180px;
+	width: 180px;
 }
 
 .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
@@ -321,7 +340,7 @@ section.new-post-main-container h1 {
 .ql-snow .ql-tooltip input[type=text] {
 	border: 1px solid #e0e0e0;
 	height: 28px;
-	padding: 4px 6px;
+	padding: 4px 8px;
 	width: 180px;
 	margin: 0 6px;
 }
@@ -332,12 +351,12 @@ section.new-post-main-container h1 {
 }
 
 .ql-snow .ql-tooltip a.ql-preview {
-	text-decoration: underline;
+	margin-right: 8px;
 }
 
 .ql-snow .ql-tooltip a {
-    display: inline-block;
-    box-sizing: border-box;
+	display: inline-block;
+	box-sizing: border-box;
 	margin-left: 8px;
 }
 
@@ -346,7 +365,7 @@ section.new-post-main-container h1 {
 }
 
 .ql-snow .ql-color-picker .ql-picker-item {
-    margin: 4px;
+	margin: 4px;
 }
 
 .ql-container.ql-snow {
@@ -475,6 +494,15 @@ section.new-post-main-container h1 {
 
 @media screen and (max-width: 600px) {
 	
+	section.new-post-main-container h1 {
+		text-align: left;
+	}
+	
+	header .cancel-post {
+		line-height: 56px;
+		height: 56px;
+	}
+	
 	.new-article #post-content {
 		padding: 16px;
 	}
@@ -486,6 +514,12 @@ section.new-post-main-container h1 {
 	
 	section.new-post-main-container {
 		padding-bottom: 64px;
+		margin-top: 70px;
+	}
+	
+	.ql-toolbar.ql-snow .ql-formats {
+		margin-bottom: 3px;
+		margin-top: 3px;
 	}
 	
 }
