@@ -37,7 +37,7 @@
         <section class="new-post-main-container">
             
             <!-- Display future ID that will be given to the new post -->
-            <h1>New post id: 488</h1>
+            <h1 class="articleId">New post id: 488</h1>
     
             <div class="new-article">
                 <form action="post.php" method="post" enctype="multipart/form-data">
@@ -51,6 +51,10 @@
                     
                     <!-- Tags section -->
                     <label class="post-tags-label">Tags:</label>
+					<!-- DEMO ONLY! -->
+					<span class="news_tags" tag="NEXUS" onclick="$(this).hide()">Nexus <i class="material-icons">remove_circle</i></span>
+					<span class="news_tags" tag="NEXUS" onclick="$(this).hide()">Apple <i class="material-icons">remove_circle</i></span>
+					<span class="news_tags" tag="NEXUS" onclick="$(this).hide()">Motorola <i class="material-icons">remove_circle</i></span>
 					<div class="addTagsBtn">
 						Add tags <i class="material-icons">add_circle</i>
 					</div>
@@ -80,15 +84,127 @@
                     <!-- Submit form and post article (Status: unpublished) -->
                     <input id="post-publish" type="submit" value="Post" />
                 </form>
-				
             </div>
+			
+			<!--  -->
+			<div class="tagModalOverlay">
+
+				<div class="tagModalContainer modal">
+					<h1>Tags</h1>
+					<div class="modalContainer">
+						<!-- STATIC (for demo only!) -->
+						<div class="tagListCol">
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Samsung</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Nexus</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Developers</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Lenovo</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Update</label>
+							</div>
+						</div>
+						<div class="tagListCol">
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Apple</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Google</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">CES</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Huawei</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Rumors</label>
+							</div>
+						</div>
+						<div class="tagListCol">
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Apps</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">MWC</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">HTC</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Asus</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Others</label>
+							</div>
+						</div>
+						<div class="tagListCol">
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Sony</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">LG</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">ZTE</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Motorola</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Nokia</label>
+							</div>
+						</div>
+						<div class="tagListCol">
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">OnePlus</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">Oppo</label>
+							</div>
+							<div class="tagItemSelect">
+								<label><input type="checkbox" name="checkbox" value="value" class="fs1">IFA</label>
+							</div>
+						</div>
+					</div>
+					<div class="modalFooter">
+						<div class="modalActionBtn closeModalBtn">Cancel</div>
+						<div class="modalActionBtn" onclick="$('.news_tags').show();$('.tagModalOverlay').fadeOut(100);">Add</div>
+					</div>
+				</div>
+			
+			</div>
+			
         </section>
 		
 		<button id="btn1" onClick="showContentHTML()">Get HTML data from editor</button>
 
         
         <script>
-            
+		
+			$(window, document, undefined).ready(function() {
+
+				/// Show overlay & Open modal
+  				// FOR DEMO PURPOSES ONLY! Need different modal implementation.
+				$( ".closeModalBtn" ).click(function() {
+					$(".tagModalOverlay").fadeOut(100);
+				});
+				$( ".addTagsBtn" ).click(function() {
+					$(".tagModalOverlay").fadeIn(150);
+				});
+					$(".tagModalContainer").click(function(event) {
+					event.stopPropagation();
+				});
+				
+			});
+			
+
             // display selected image and image path before upload
             function get_filename(obj) {
                 var file = obj.value;
@@ -131,7 +247,6 @@ W.I.P / TO-DO:
 - Blue outline on editor when focus;
 - Guidelines / Instructions (separate page / article example as placeholder on editor / ... ?);
 - find other solution for main image selection (better UX);
-- Add tag modal;
 - Import styles for Quote, links, and videos to the main Article page.
 
 
