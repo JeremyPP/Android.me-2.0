@@ -1,8 +1,7 @@
 ﻿$(document).ready(function() {
 	
 	
-	/* Header bar shadow on scroll */
-
+	// Header bar shadow on scroll
 	/*$(window).scroll(function() {
 		if($(window).scrollTop() > 125) {
 			$(".page-header").css('box-shadow', '0 2px 5px rgba(0,0,0,.26)');
@@ -12,20 +11,32 @@
 	});*/
 
 
-	/* Open/close responsive menu */
-
-	$(".resp-name-logo").click(function(){
+	// Open/close responsive menu
+	$(".resp-name-logo, .hamburgerButton").click(function(){
 		$(".header-menu").css("marginLeft", "0");
 		$(".responsive-menu-overlay").css("display", "block");
+		$(".page-header").css("background", "#323967");
+		 $('body').css({'overflow':'hidden'});
 	});
 	$(".responsive-menu-overlay").click(function(){
 		$(".header-menu").css("marginLeft", "-280px");
 		$(".responsive-menu-overlay").css("display", "none");
+		$(".page-header").css("background", "#6472cd");
+		$('body').css({'overflow':'auto'});
 	});
+	
+	// Close responsive menu if windows is larger than 840px
+	window.onresize = function(event) {
+		if ($(window).width() > 840) {
+			$(".header-menu").css("marginLeft", "-280px");
+			$(".responsive-menu-overlay").css("display", "none");
+			$(".page-header").css("background", "#6472cd");
+			$('body').css({'overflow':'auto'});
+		}
+	};
 
 
-	/* Navigate between articles with keyboard arrows */
-
+	// Navigate between articles with keyboard arrows
 	function TeclaRedir() {
 		if (window.event) {
 			var keynum = event.keyCode;
