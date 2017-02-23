@@ -461,3 +461,20 @@ body {
 	}
 
 }
+
+@media screen and (max-width: 480px) {
+	
+	.page-footer {
+		height: 114px;
+	}
+
+	.page-footer .footerLinks {
+		line-height: 22px;
+		padding: 0 24px;
+	}
+
+	.page-footer .copyright {
+		padding: 0 12px;
+	}
+	
+}

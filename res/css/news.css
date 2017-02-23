@@ -507,6 +507,11 @@
     .share-article .share-links img {
         float: none;
     }
+	
+	.comment-section {
+		width: 95%;
+		padding-top: 24px;
+	}
 
 }
 
@@ -533,19 +538,6 @@
 	.article-info a.news_tags {
 		border: none;
 		font-size: 12px;
-	}
-	
-}
-
-@media screen and (max-width: 480px) {
-	
-	.page-footer {
-		height: 114px;
-	}
-	
-	.page-footer .footerLinks {
-		line-height: 22px;
-		padding: 0 24px;
 	}
 	
 }
