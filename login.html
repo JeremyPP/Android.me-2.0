@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico">
+
+		<!-- Main style -->
+        <link rel="stylesheet" href="res/css/style.css">
+        
+        <!-- Page style -->
+        <link rel="stylesheet" href="res/css/login.css">
+        
+        <!-- Import jQuery (from Google) --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		<!-- Import Material Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<!-- Import Roboto font (Google font) -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        
+        <!-- Page info -->
+        <title>Log In | Android.me</title>
+    </head>
+    <body>
+		<header class="loginHeader noUserSelect">
+            <a href="index.html"><img src="res/img/tst_logo.png" class="logoLogin"></a>
+        </header>
+		
+		<section>
+			
+			<div class="loginContainer mainAuthContainer">
+				<h2>
+					<span class="subheading">Log in or create a new account to continue</span>
+				</h2>
+				<form action="index.php">
+					<div class="group">
+					  <input type="text" required="required"/><span class="highlight"></span><span class="bar"></span>
+					  <label>Username</label>
+					</div>
+					<div class="group">
+					  <input type="password" required="required"/><span class="highlight"></span><span class="bar"></span>
+					  <label>Password</label>
+					</div>
+					<input type="submit" value="login" class="loginBtn">
+					<div class="createAccountLink noUserSelect">or<br><p class="createAccountToggle">Create an account</p></div>
+				</form>
+			</div>
+			
+			<div class="newAccountContainer mainAuthContainer">
+				<div class="loginLink noUserSelect">
+					<i class="material-icons">arrow_back</i>
+				</div>
+				<h2>
+					<span class="subheading">Enter your email and a password to create your account</span>
+				</h2>
+				<form action="newaccount.html">
+					<div class="group">
+					  <input type="email" required="required" id="emailSubmitInput"/><span class="highlight"></span><span class="bar"></span>
+					  <label>Email</label>
+					</div>
+					<div class="group">
+					  <input type="password" required="required"/><span class="highlight"></span><span class="bar"></span>
+					  <label>Password</label>
+					</div>
+					<input type="submit" value="continue" class="loginBtn">
+				</form>
+			</div>
+			
+		</section>
+		
+		<script>
+		
+			// Toggle between Login and Account creation
+			$('.createAccountToggle').click(function(){
+				$('.loginContainer').hide();
+				$('.newAccountContainer').show();
+			});
+			$('.loginLink i').click(function(){
+				$('.loginContainer').show();
+				$('.newAccountContainer').hide();
+			});
+
+			//falback for email input
+			$('input').keyup(function(){
+				if($('#emailSubmitInput').val().length > 0)
+					$("#emailSubmitInput").addClass('hasValue');
+				else
+					$("#emailSubmitInput").removeClass('hasValue');
+			});
+		</script>
+	</body>
+</html>
+
+
+
+<!-- =====================
+
+
+W.I.P / TO-DO:
+
+- Make sure everything is responsive;
+- Find an option for the Reset password;
+- Errors & validations;
+- Accessibility (?);
+- 
+
+
+===================== -->

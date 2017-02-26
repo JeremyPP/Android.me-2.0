@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico">
+
+		<!-- Main style -->
+        <link rel="stylesheet" href="res/css/style.css">
+        
+        <!-- Page style -->
+        <link rel="stylesheet" href="res/css/login.css">
+		        
+        <!-- Import jQuery (from Google) --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		
+		<script src="res/js/cropit.js"></script>
+		
+		<!-- Import Material Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<!-- Import Roboto font (Google font) -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        
+        <!-- Page info -->
+        <title>Log In | Android.me</title>
+    </head>
+    <body>
+		<header class="loginHeader noUserSelect">
+            <a href="index.html"><img src="res/img/tst_logo.png" class="logoLogin"></a>
+        </header>
+		
+		<section>
+			
+			<div class="newAccountMoreContainer mainAuthContainer">
+				<h3>Chose a username and upload your profile picture (optional) to complete your account.</h3>
+			
+				<form action="">
+				
+					<div class="usernameSelectorForm">
+						<div class="group">
+							<input type="text" required="required" class="mi"/><span class="highlight"></span><span class="bar"></span>
+							<label>Username</label>
+						</div>
+					</div>
+				
+					<div class="image-editor">
+						
+						<!-- The actual file input will be hidden -->
+						<input type="file" class="cropit-image-input" />
+						
+						<!-- And clicking on this button will open up select file dialog -->
+						<div class="select-image-btn">Select profile image</div>
+						
+						<div class="hiddenEditorContainer" style="display:none">
+						
+							<div class="cropit-preview">
+								<i class="material-icons profilePhotoPlaceholder">person</i>
+							</div>
+							
+							<div class="controls-wrapper">
+								<div class="rotation-btns">
+									<i class="material-icons rotate-cw-btn">rotate_left</i>
+									<i class="material-icons rotate-ccw-btn">rotate_right</i>
+								</div>
+								<div class="slider-wrapper">
+									<i class="material-icons">zoom_out</i>
+									<input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+									<i class="material-icons">zoom_in</i>
+								</div>
+							</div>
+						
+						</div>
+						
+						<input type="hidden" name="image-data" class="hidden-image-data" />
+					</div>
+					
+					<input type="submit" value="Create account" class="createAccountBtn">
+					
+				</form>
+
+			</div>
+			
+		</section>
+		
+		<script>
+				
+			$('.cropit-image-input').change(function() {
+				if($.trim($('.cropit-image-input').val()).length){
+					$(".hiddenEditorContainer").show();
+					$(".select-image-btn").html("Change image");
+				};
+			});
+			
+			$(function() {
+				$('.image-editor').cropit();
+						
+				// When user clicks select image button,
+				// open select file dialog programmatically
+				$('.select-image-btn').click(function() {
+					$('.cropit-image-input').click();
+				});
+				
+				// Handle rotation
+				$('.rotate-cw-btn').click(function() {
+					$('.image-editor').cropit('rotateCW');
+				});
+				$('.rotate-ccw-btn').click(function() {
+					$('.image-editor').cropit('rotateCCW');
+				});
+
+				$('form').submit(function() {
+					// Move cropped image data to hidden input
+					var imageData = $('.image-editor').cropit('export');
+					$('.hidden-image-data').val(imageData);
+
+					return true;
+				});
+			});
+
+		</script>
+	</body>
+</html>
+
+
+
+<!-- =====================
+
+
+W.I.P / TO-DO:
+
+- Make sure everything is responsive;
+- Info tooltip on Username input;
+- Errors & validations;
+- Accessibility (?);
+- 
+
+
+===================== -->

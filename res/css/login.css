@@ -1,0 +1,363 @@
+.loginHeader {
+	text-align: center;
+	margin-top: 24px;
+	height: 56px;
+	padding: 4px 0;
+}
+
+.loginHeader a {
+	outline: none;
+}
+
+.loginHeader img.logoLogin {
+	height: 56px;
+	opacity: .64;
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
+.loginHeader img.logoLogin:hover {
+	opacity: .72;
+}
+
+.loginContainer,
+.newAccountContainer,
+.newAccountMoreContainer {
+	width: 320px;
+	height: 480px;
+	margin: 0 auto;
+	margin-top: 24px;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.newAccountMoreContainer {
+	width: 350px;
+	height: auto;
+}
+
+.mainAuthContainer.newAccountContainer {
+	display: none;
+}
+
+.mainAuthContainer h2 {
+	font-size: 22px;
+	font-weight: 300;
+	padding: 0 30px;
+	margin-top: 32px;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+
+.newAccountContainer h2 {
+	margin-top: 26px;
+}
+
+.mainAuthContainer h2 .subheading {
+	color: rgba(0, 0, 0, 0.45);
+	display: block;
+	margin-top: 10px;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.mainAuthContainer form {
+	max-width: 260px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+}
+
+.newAccountMoreContainer form {
+	max-width: 350px;
+	text-align: center;
+}
+
+.usernameSelectorForm {
+	max-width: 286px;
+	margin: 0 auto;
+}
+
+.loginLink i {
+	width: 32px;
+	height: 32px;
+	opacity: .52;
+	border-radius: 20px;
+	margin: 30px;
+	margin-bottom: -12px;
+	padding: 2px;
+	font-size: 26px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.loginLink i:hover {
+	background: #c6c6c6;
+	cursor: pointer;
+}
+
+
+/* Inputs */
+
+.group {
+	position: relative;
+	margin: 45px 0;
+	text-align: left;
+}
+
+.group input{
+	background: none;
+	color: rgba(0, 0, 0, 0.84);
+	font-size: 16px;
+	padding: 10px 0 10px 0;
+	display: block;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #c6c6c6;
+	font-family: 'Roboto', sans-serif;
+}
+
+.group input:focus {
+	outline: none;
+}
+
+.group input:focus ~ label, .group input:valid ~ label {
+	top: -14px;
+	font-size: 12px;
+	color: #6472cd;
+}
+
+.group input.hasValue ~ label {
+	top: -14px;
+	font-size: 12px;
+	color: #6472cd;
+}
+
+.group input:focus ~ .bar:before {
+	width: 100%;
+}
+
+label {
+	color: #c6c6c6;
+	font-size: 16px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	top: 10px;
+	-webkit-transition: 300ms ease all;
+	transition: 300ms ease all;
+}
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 0px;
+	position: absolute;
+	background: #6472cd;
+	-webkit-transition: 300ms ease all;
+	transition: 300ms ease all;
+	left: 0%;
+}
+
+
+/* Buttons & links */
+
+.loginBtn {
+	background: #6472cd;
+	border: none;
+	border-radius: 2px;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 0 16px;
+	font-weight: 500;
+	height: 36px;
+	width: 100%;
+	line-height: 36px;
+	cursor: pointer;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 8px;
+	outline: none;
+	letter-spacing: .8px;
+}
+
+.loginBtn:active,
+.createAccountBtn:active {
+	background: #7482db;
+}
+
+.createAccountLink {
+	text-align: center;
+	margin-top: 14px;
+	color: rgba(0,0,0,0.54);
+	line-height: 28px;
+}
+
+.createAccountLink p {
+	color: #607D8B;
+	text-decoration: none;
+	font-weight: 500;
+	cursor: pointer;
+	margin: 0;
+	font-size: 14px;
+	/*text-transform: uppercase;*/
+	margin-top: 8px;
+	height: 36px;
+	line-height: 37px;
+	border-radius: 2px;
+}
+
+.createAccountLink p:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+
+/* New account page */
+
+section .newAccountMoreContainer h3 {
+	padding: 0 30px;
+	color: rgba(0, 0, 0, 0.45);
+	font-size: 18px;
+	line-height: 22px;
+	margin-top: 32px;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+
+input.cropit-image-input {
+	visibility: hidden;
+}
+
+.select-image-btn {
+	border: none;
+	border-radius: 2px;
+	color: #607D8B;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	height: 36px;
+	line-height: 36px;
+	cursor: pointer;
+	letter-spacing: .8px;
+	width: 250px;
+	margin: 0 auto;
+	margin-top: -18px;
+	text-align: center;
+}
+
+.select-image-btn:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.createAccountBtn {
+	background: #6472cd;
+	border: none;
+	border-radius: 2px;
+	width: 250px;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 0 16px;
+	font-weight: 500;
+	height: 36px;
+	line-height: 36px;
+	cursor: pointer;
+	margin-top: 52px;
+	margin-bottom: 52px;
+	font-family: 'Roboto', sans-serif;
+	outline: none;
+}
+
+.image-editor {
+	width: 100%;
+	text-align: center;
+}
+
+
+/* Image croper */
+
+.cropit-preview {
+	background-color: #748f9c;
+	background-size: cover;
+	width: 250px;
+	height: 250px;
+	margin: 15px auto;
+}
+
+.controls-wrapper {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.controls-wrapper .material-icons {
+	color: rgba(0, 0, 0, 0.72);
+}
+
+.controls-wrapper .rotation-btns {
+	font-size: 16px;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.controls-wrapper .rotation-btns i {
+	margin: 0 4px;
+	cursor: pointer;
+}
+
+.controls-wrapper .slider-wrapper {
+	display: inline-block;
+}
+
+.controls-wrapper .slider-wrapper .cropit-image-zoom-input.custom {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	height: 4px;
+	background: #BDBDBD;
+	outline: none;
+	width: 130px;
+	margin: 0 6px;
+	position: relative;
+	top: -12px;
+	border-radius: 10px;
+}
+
+.controls-wrapper .slider-wrapper i {
+	margin-top: 4px;
+}
+
+.controls-wrapper .slider-wrapper input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border-radius: 30px;
+	background-color: #6472cd;
+	height: 15px;
+	width: 15px;
+	vertical-align:middle;
+}
+
+.cropit-preview .profilePhotoPlaceholder {
+	line-height: 250px;
+	color: rgba(0, 0, 0, 0.12);
+	font-size: 200px;
+}
+
+.cropit-preview-image-container {
+	cursor: move;
+}
+
+input.cropit-image-input {	/* Hide file input */
+	visibility: hidden;
+}
