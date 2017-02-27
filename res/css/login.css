@@ -81,6 +81,23 @@
 	margin: 0 auto;
 }
 
+.recoverPassword {
+	position: absolute;
+	right: 8px;
+	top: 10px;
+	cursor: pointer;
+}
+
+.recoverPassword i.material-icons {
+	font-size: 20px;
+	color: #FFC107;
+}
+
+.loginContainer .group input[type="password"] {
+	padding-right: 34px;
+	box-sizing: border-box;
+}
+
 .loginLink i {
 	width: 32px;
 	height: 32px;
@@ -360,4 +377,46 @@ input.cropit-image-input {
 
 input.cropit-image-input {	/* Hide file input */
 	visibility: hidden;
+}
+
+
+
+/* ========== Reset password popup (tooltip) ========== */
+
+
+[data-tooltip]:before {
+	position: absolute;
+	top: -9px;
+	margin-top: 5px;
+	margin-left: -132px;
+	padding: 4px 8px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 3px;
+	background-color: #212121;
+	color: #9E9E9E;
+	content: attr(data-tooltip);
+	font-size: 14px;
+	line-height: 20px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+[data-tooltip]:before, [data-tooltip]:after {
+	visibility: hidden;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	pointer-events: none;
+}
+
+[data-tooltip]:hover:before, [data-tooltip]:hover:after {
+	visibility: visible;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1;
+}
+
+[data-tooltip] {
+	z-index: 2;
+	cursor: pointer;
 }
