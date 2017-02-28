@@ -118,6 +118,10 @@
 					return true;
 				});
 			});
+			
+			window.onbeforeunload = function() {
+				return 'You have unsaved changes!';
+			}
 
 		</script>
 	</body>
