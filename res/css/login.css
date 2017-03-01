@@ -25,6 +25,7 @@
 
 .loginContainer,
 .newAccountContainer,
+.resetPasswordContainer,
 .newAccountMoreContainer {
 	width: 320px;
 	height: 480px;
@@ -40,7 +41,8 @@
 	height: auto;
 }
 
-.mainAuthContainer.newAccountContainer {
+.mainAuthContainer.newAccountContainer,
+.mainAuthContainer.resetPasswordContainer {
 	display: none;
 }
 
@@ -53,7 +55,8 @@
 	font-weight: 400;
 }
 
-.newAccountContainer h2 {
+.newAccountContainer h2,
+.resetPasswordContainer h2 {
 	margin-top: 26px;
 }
 
@@ -90,7 +93,7 @@
 
 .recoverPassword i.material-icons {
 	font-size: 20px;
-	color: #FFC107;
+	color: rgba(0, 0, 0, 0.4);
 }
 
 .loginContainer .group input[type="password"] {
@@ -186,6 +189,28 @@ label {
 	transition: 300ms ease all;
 	left: 0%;
 }
+
+/* Input erros */
+.displayInputError .bar:before {
+	background: #F44336;
+	width: 100%;
+}
+
+.inputErrorMsg {
+	font-size: 12px;
+	padding-top: 6px;
+	color: #F44336;
+	display:none;
+}
+
+/*.displayInputError.group input:focus ~ label,
+.displayInputError.group input:valid ~ label {
+	color: #c6c6c6;
+}
+
+.displayInputError.group input.hasValue ~ label {
+	color: #c6c6c6;
+}*/
 
 
 /* Buttons & links */
@@ -388,7 +413,7 @@ input.cropit-image-input {	/* Hide file input */
 	position: absolute;
 	top: -9px;
 	margin-top: 5px;
-	margin-left: -132px;
+	margin-left: -128px;
 	padding: 4px 8px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;

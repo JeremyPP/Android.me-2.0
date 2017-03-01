@@ -38,16 +38,34 @@
 					<div class="group">
 					  <input type="text" required="required"/><span class="highlight"></span><span class="bar"></span>
 					  <label>Username</label>
+					  <div class="inputErrorMsg">Username not found</div>
 					</div>
 					<div class="group">
-					  <input type="password" required="required"/><span class="highlight"></span><span class="bar"></span>
-					  <label>Password</label>
-					  <div class="recoverPassword noUserSelect" data-tooltip="Forgot password">
-						<i class="material-icons">help_outline</i>
-					  </div>
+						<input type="password" required="required"/><span class="highlight"></span><span class="bar"></span>
+						<label>Password</label>
+						<div class="recoverPassword noUserSelect" data-tooltip="Forgot password">
+							<i class="material-icons">help_outline</i>
+						</div>
+						<div class="inputErrorMsg">Invalid password</div>
 					</div>
 					<input type="submit" value="login" class="loginBtn">
 					<div class="createAccountLink noUserSelect">or<br><p class="createAccountToggle">Create an account</p></div>
+				</form>
+			</div>
+			
+			<div class="resetPasswordContainer mainAuthContainer">
+				<div class="loginLink noUserSelect">
+					<i class="material-icons">arrow_back</i>
+				</div>
+				<h2>
+					<span class="subheading">Enter your email and we'll send you a link to reset your password</span>
+				</h2>
+				<form action="resetpassword.html">
+					<div class="group">
+					  <input type="email" required="required" id="emailResetPassInput"/><span class="highlight"></span><span class="bar"></span>
+					  <label>Email</label>
+					</div>
+					<input type="submit" value="Send" class="loginBtn">
 				</form>
 			</div>
 			
@@ -84,14 +102,59 @@
 				$('.loginContainer').show();
 				$('.newAccountContainer').hide();
 			});
-
-			//falback for email input
-			$('input').keyup(function(){
-				if($('#emailSubmitInput').val().length > 0)
-					$("#emailSubmitInput").addClass('hasValue');
-				else
-					$("#emailSubmitInput").removeClass('hasValue');
+			
+			// Toggle reset password
+			$('.recoverPassword').click(function(){
+				$('.loginContainer').hide();
+				$('.newAccountContainer').hide();
+				$('.resetPasswordContainer').show();
 			});
+			$('.loginLink i').click(function(){
+				$('.loginContainer').show();
+				$('.resetPasswordContainer').hide();
+			});
+
+			// falback for email input
+			$('input').keyup(function(){
+				if($(this).val().length > 0)
+					$(this).addClass('hasValue');
+				else
+					$(this).removeClass('hasValue');
+			});
+
+			
+			// === ERRORS ===
+			
+			function errorLoginUsername() {
+				console.debug("Username not found");
+			}
+			
+			function errorLoginPassword() {
+				console.debug("Incorect password");
+				// Add class .displayInputError to group with the error;
+				// Show div .inputErrorMsg;
+			}
+			
+			function errorNewEmailInvalid() {
+				console.debug("Invalid email");
+			}
+			
+			function errorNewEmailExists() {
+				console.debug("This email already exists");
+			}
+			
+			function errorNewPasswordInvalid() {
+				console.debug("Invalid password");
+			}
+			
+			function errorResetEmailNotFound() {
+				console.debug("Email not found");
+			}
+			
+			function errorUndefined() {
+				console.debug("Error");
+			}
+			
 		</script>
 	</body>
 </html>
