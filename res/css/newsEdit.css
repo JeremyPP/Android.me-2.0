@@ -494,4 +494,11 @@ input#saveEditPost:hover {
 		margin-top: 3px;
 	}
 	
+	.article-info span.news_tags {
+		display: inline-block;
+		box-sizing: border-box;
+		height: 29px;
+		line-height: 17px;
+	}
+	
 }

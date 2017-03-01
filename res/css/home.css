@@ -270,12 +270,12 @@ body {
 
 .news-col  {
 	float: left;
-	width: 320px;
+	width: calc(100% / 3);
 }
 
 .news-card {
 	background: #fff;
-	width: 300px;
+	width: calc(100% - 20px);
 	margin: 10px 10px;
 	position: relative;
 	float: left;
@@ -410,12 +410,19 @@ body {
 	.headerBannerHero {
 		width: 96%;
 	}
+	
+	.tagSelectMenu {
+		right: 26px;
+		text-align: right;
+	}
 
 }
 
 @media screen and (max-width: 840px) {
 	
-
+	.news-col {
+		width: 50%;
+	}
 
 }
 
@@ -447,8 +454,12 @@ body {
 @media screen and (max-width: 480px) {
 	
 	.headerBannerHero {
-		height: 308px;
+		height: 284px;
 		margin-top: 68px;
+	}
+	
+	.bannerCtaButtons {
+		margin-top: 28px;
 	}
 	
 	.topBannerCOntentContainer {
@@ -459,5 +470,32 @@ body {
 		max-width: 88%;
 		padding-top: 24px;
 	}
+	
+	.news-col {
+		width: 100%;
+	}
 
+}
+
+@media screen and (max-width: 400px) {
+	
+	.topBannerCOntentContainer h1 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	
+	.topBannerCOntentContainer p {
+		font-size: 14px;
+		line-height: 21px;
+		margin-top: 8px;
+	}
+	
+	.bannerCtaButtons a.ctaTwo div {
+		margin-left: 16px;
+	}
+	
+	.headerBannerHero {
+		height: 252px;
+	}
+	
 }
