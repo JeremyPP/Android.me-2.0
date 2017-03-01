@@ -171,11 +171,11 @@ body {
 
 .filter-container {
 	height: 48px;
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
 	padding: 0 10px;
 	margin: 6px 0 0 0;
 	box-sizing: border-box;
-	
 	text-align: right;
 	position: relative;
 }
