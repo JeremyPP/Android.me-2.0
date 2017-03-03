@@ -1,0 +1,180 @@
+
+
+
+/* ========== Main Styles ========== */
+
+
+html {
+	height: 100%;
+}
+
+body {
+	background: #EFF3F6;
+	height: calc(100% - 64px);
+}
+
+.main-container {
+	height: calc(100% - 200px);
+}
+
+
+
+/* ========== Profile header ========== */
+
+
+.profileHeaderContainer {
+	background: #6472cd;
+	height: 200px;
+	margin-top: 64px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.profileInfoContainer {
+	height: 152px;
+	width: 100%;
+	max-width: 480px;
+	margin: 0 auto;
+}
+
+.profileInfoLeft,
+.profileInfoRight {
+	height: 100%;
+	float: left;
+}
+
+.profileInfoLeft {
+	width: 72%;
+}
+
+.profileInfoRight {
+	width: 28%;
+	text-align: center;
+}
+
+.profileInfoRight img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 3px solid #eff3f6;
+	margin-top: 21px;
+}
+
+.profileName {
+	font-size: 24px;
+	color: rgba(255, 255, 255, 0.52);
+	padding: 0 16px;
+	padding-top: 24px;
+}
+
+.editProfileBtn {
+	height: 36px;
+	line-height: 37px;
+	padding: 0 24px;
+	border-radius: 2px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	color: #FFC107;
+	background: rgba(255, 255, 255, 0.12);
+	display: inline-block;
+	margin: 16px;
+	cursor: pointer;
+	margin-top: 24px;
+}
+
+
+
+/* ========== Profile content ========== */
+
+
+/* Tabs */
+
+.tab-wrap {
+	width: 940px;
+	margin: 0 auto;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+input[type="radio"][name="tabs"] {
+	position: absolute;
+	z-index: -999;
+}
+
+input[type="radio"][name="tabs"]:checked + .tab-label-content label {
+	color: white;
+}
+
+input[type="radio"][name="tabs"]:nth-of-type(1):checked ~ .slide {
+	left: calc((100% / 4) * 0);
+}
+
+input[type="radio"][name="tabs"]:nth-of-type(2):checked ~ .slide {
+	left: calc((100% / 4) * 1);
+}
+
+input[type="radio"][name="tabs"]:nth-of-type(3):checked ~ .slide {
+	left: calc((100% / 4) * 2);
+}
+
+input[type="radio"][name="tabs"]:nth-of-type(4):checked ~ .slide {
+	left: calc((100% / 4) * 3);
+}
+
+input[type="radio"][name="tabs"]:first-of-type:checked ~ .slide {
+	left: 0;
+}
+
+.tab-wrap label {
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: #6472cd;
+	box-sizing: border-box;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	height: 48px;
+	-webkit-transition: color 0.2s ease;
+	transition: color 0.2s ease;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.slide {
+	/*background: #ffeb3b;*/
+	background: #FFC107;
+	width: calc(100% / 4);
+	height: 2px;
+	position: absolute;
+	left: 0;
+	top: calc(100% - 2px);
+	-webkit-transition: left 0.3s ease-out;
+	transition: left 0.3s ease-out;
+}
+
+.tab-label-content {
+	width: 100%;
+}
+
+/* Tabs content */
+
+.tabContentContainer {
+	width: 100%;
+	max-width: 940px;
+	margin: 0 auto;
+	min-height: 100%;
+	box-sizing: border-box;
+	padding-top: 16px;
+}
