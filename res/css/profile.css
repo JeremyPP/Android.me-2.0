@@ -90,6 +90,17 @@ body {
 
 /* Tabs */
 
+.fixTheTabs {
+	width: 100%;
+	background: #6472cd;
+	z-index: 99;
+}
+
+.fixTheTabs.tabFixed {
+	position: fixed;
+	top: 64px;
+}
+
 .tab-wrap {
 	width: 940px;
 	margin: 0 auto;
@@ -153,7 +164,6 @@ input[type="radio"][name="tabs"]:first-of-type:checked ~ .slide {
 }
 
 .slide {
-	/*background: #ffeb3b;*/
 	background: #FFC107;
 	width: calc(100% / 4);
 	height: 2px;
@@ -177,4 +187,125 @@ input[type="radio"][name="tabs"]:first-of-type:checked ~ .slide {
 	min-height: 100%;
 	box-sizing: border-box;
 	padding-top: 16px;
+}
+
+.feedHighlightsSection,
+.feedTrendingSection {
+	min-height: 200px;
+	margin-bottom: 32px;
+}
+
+.feedSectionTitleBar {
+	position: relative;
+	margin-left: 8px;
+	margin-top: 24px;
+}
+
+.feedSectionTitleBar .feedSectionTitleMain {
+	font-size: 20px;
+	color: rgba(0, 0, 0, 0.84);
+	font-weight: 500;
+	padding-bottom: 4px;
+}
+
+.feedSectionTitleBar .feedSectionSubtitle {
+	color: #616161;
+	font-size: 14px;
+	font-weight: 400;
+	opacity: .75;
+	margin-bottom: 16px;
+}
+
+.feedSectionTitleBar .feedSectionConfigBtn {
+	position: absolute;
+	top: 7px;
+	right: 16px;
+	color: rgba(0, 0, 0, 0.24);
+	font-size: 24px;
+	border-radius: 30px;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 4px;
+}
+
+.feedSectionTitleBar .feedSectionConfigBtn:hover {
+	cursor: pointer;
+	color: rgba(0, 0, 0, 0.32);
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.feedArticlesContainer {
+	width: 100%;
+}
+
+
+/* News cards */
+
+.news-card {
+	background: #fff;
+	width: calc((100% / 3) - 19px);
+	margin: 10px 10px;
+	position: relative;
+	display: inline-block;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.15);
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+	vertical-align: top;
+	margin-right: 6px;
+}
+
+.news-card a {
+	text-decoration: none;
+	color: initial;
+}
+
+.news-card:hover {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.news-card h1 {
+	margin: 0;
+	padding: 16px;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.84);
+	margin-top: -4px;
+	line-height: 23px;
+}
+
+.news-img {
+	width: 100%;
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+}
+
+.news-info {
+	text-align: right;
+	margin: 0 8px;
+	padding: 8px 0;
+	border-top: 1px solid #EEEEEE;
+	color: rgba(0, 0, 0, 0.32);
+}
+
+.news-info span {
+	margin-right: 10px;
+	padding: 2px 5px;
+	font-size: 13px;
+	font-weight: 600;
+	height: 20px;
+	display: inline-block;
+	line-height: 20px;
+}
+
+.news-info span i {
+	font-size: 16px;
+	margin-top: 2px;
+	float: left;
+	padding-right: 4px;
 }

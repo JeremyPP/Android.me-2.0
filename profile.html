@@ -66,7 +66,7 @@
 				<div class="profileInfoLeft">
 					<div class="profileName">Emmett	Stevenson</div>
 					<div class="profileActionsContainer">
-						<div class="editProfileBtn">Edit profile</div>
+						<div class="editProfileBtn noUserSelect">Edit profile</div>
 					</div>
 				</div>
 				<div class="profileInfoRight">
@@ -76,36 +76,140 @@
 			</div>
 			
 			<!-- Tabs -->
-			<div class="tab-wrap">
-			  <input type="radio" name="tabs" id="tab1" checked>
-			  <div class="tab-label-content" id="tab1-content">
-				<label for="tab1">Feed</label>
-			  </div>
-			  <input type="radio" name="tabs" id="tab2">
-			  <div class="tab-label-content" id="tab2-content">
-				<label for="tab2">My news</label>
-			  </div>
-			  <input type="radio" name="tabs" id="tab3">
-			  <div class="tab-label-content" id="tab3-content">
-				<label for="tab3">Up voted news</label>
-			  </div>
-			  <input type="radio" name="tabs" id="tab4">
-			  <div class="tab-label-content" id="tab4-content">
-				<label for="tab4">My questions</label>
-			  </div>
-			  <div class="slide"></div>
+			<div class="fixTheTabs">
+				<div class="tab-wrap">
+				  <input type="radio" name="tabs" id="tab1" checked>
+				  <div class="tab-label-content" id="tab1-content">
+					<label for="tab1" class="noUserSelect">Feed</label>
+				  </div>
+				  <input type="radio" name="tabs" id="tab2">
+				  <div class="tab-label-content" id="tab2-content">
+					<label for="tab2" class="noUserSelect">My news</label>
+				  </div>
+				  <input type="radio" name="tabs" id="tab3">
+				  <div class="tab-label-content" id="tab3-content">
+					<label for="tab3" class="noUserSelect">Up voted news</label>
+				  </div>
+				  <input type="radio" name="tabs" id="tab4">
+				  <div class="tab-label-content" id="tab4-content">
+					<label for="tab4" class="noUserSelect">My questions</label>
+				  </div>
+				  <div class="slide"></div>
+				</div>
 			</div>
 		</section>
 
 		<section class="main-container">
 			
 			<!-- Tabs content -->
-			<div class="tabContentContainer tab1content">Content goes here...</div>
 			
-			<div class="tabContentContainer tab2content" style="display:none;">2</div>
+			<!-- Tab 1 content -->
+			<div class="tabContentContainer tab1content">
+				<section class="feedHighlightsSection">
+					<div class="feedSectionTitleBar">
+						<div class="feedSectionTitleMain">Highlights</div>
+						<div class="feedSectionSubtitle">Recommended based on your interests</div>
+						<div class="feedSectionConfigBtn noUserSelect"><i class="material-icons">settings</i></div>
+					</div>
+					<div class="feedArticlesContainer">
+					
+						<div class="news-card">
+							<a href="article.html">
+								<img class="news-img" src="articles_images/previews/The_fingerprint_company_that_Samsung_never_bought_is_now_everywhere.png" alt="">
+								<h1>The fingerprint company that Samsung never bought is now everywhere</h1>
+								<div class="news-info">
+									<span><i class="material-icons">visibility</i> 2K</span>
+									<span><i class="material-icons">comment</i> 14</span>
+									<span><i class="material-icons">favorite</i> 17</span>
+								</div>
+							</a>
+						</div>
+						
+						<div class="news-card">
+							<a href="">
+								<img class="news-img" src="articles_images/previews/Korea_report_LG_G4_to_come_with_a_curved_display.png" alt="">
+								<h1>Korea report: LG G4 to come with a curved display</h1>
+								<div class="news-info">
+									<span><i class="material-icons">visibility</i> 7.1K</span>
+									<span><i class="material-icons">comment</i> 20</span>
+									<span><i class="material-icons">favorite</i> 17</span>
+								</div>
+							</a>
+						</div>
+						
+						<div class="news-card">
+							<a href="">
+								<img class="news-img" src="articles_images/previews/Google_Glass_isnt_dead_its_being_made_ready_for_users_says_Eric_Schmidt.png" alt="">
+								<h1>Google Glass isn't dead, it's being 'made ready for users,' says Eric Schmidt</h1>
+								<div class="news-info">
+									<span><i class="material-icons">visibility</i> 6.4K</span>
+									<span><i class="material-icons">comment</i> 10</span>
+									<span><i class="material-icons">favorite</i> 37</span>
+								</div>
+							</a>
+						</div>
+					
+					</div>
+				</section>
+				
+				<section class="feedTrendingSection">
+					<div class="feedSectionTitleBar">
+						<div class="feedSectionTitleMain">Trending</div>
+						<div class="feedSectionSubtitle">Most popular articles this week</div>
+					</div>
+					<div class="feedArticlesContainer">
+					
+						<div class="news-card">
+							<a href="article.html">
+								<img class="news-img" src="articles_images/previews/Samsung_announces_the_Galaxy_S6_and_Galaxy_S6_Edge.png" alt="">
+								<h1>Samsung announces the Galaxy S6 and Galaxy S6 Edge</h1>
+								<div class="news-info">
+									<span><i class="material-icons">visibility</i> 9.2K</span>
+									<span><i class="material-icons">comment</i> 21</span>
+									<span><i class="material-icons">favorite</i> 45</span>
+								</div>
+							</a>
+						</div>
+						
+						<div class="news-card">
+							<a href="article.html">
+								<img class="news-img" src="articles_images/previews/HTC_announces_the_Grip_a_fitness_tracker_in_partnership_with_Under_Armour.png" alt="">
+								<h1>HTC announces the Grip, a fitness tracker in partnership with Under Armour</h1>
+								<div class="news-info">
+									<span><i class="material-icons">visibility</i> 8.7K</span>
+									<span><i class="material-icons">comment</i> 40</span>
+									<span><i class="material-icons">favorite</i> 23</span>
+								</div>
+							</a>
+						</div>
+						
+						<div class="news-card">
+							<a href="article.html">
+								<img class="news-img" src="articles_images/previews/Google_is_launching_their_own_payments_framework_Android_Pay.png" alt="">
+								<h1>Google is launching their own payments framework: Android Pay</h1>
+								<div class="news-info">
+									<span><i class="material-icons">visibility</i> 8K</span>
+									<span><i class="material-icons">comment</i> 31</span>
+									<span><i class="material-icons">favorite</i> 12</span>
+								</div>
+							</a>
+						</div>
+						
+					</div>
+				</section>
+			</div>
 			
-			<div class="tabContentContainer tab3content" style="display:none;">3</div>
+			<!-- Tab 2 content -->
+			<div class="tabContentContainer tab2content" style="display:none;">
+				All, pending review, published.
+			</div>
 			
+			<!-- Tab 3 content -->
+			<div class="tabContentContainer tab3content" style="display:none;">
+				All up voted news
+			</div>
+			
+			<!-- Tab 4 content -->
 			<div class="tabContentContainer tab4content" style="display:none;">4</div>
 		
 			<footer class="page-footer">
@@ -150,6 +254,18 @@
 					$(".tab2content").hide();
 					$(".tab3content").hide();
 					$(".tab4content").show();
+				};
+				$(window).scrollTop(0); // Animate?
+			});
+			
+			
+			// Fix tabs when scrolling
+			
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 154) {
+					$(".fixTheTabs").addClass("tabFixed");
+				} else {
+					$(".fixTheTabs").removeClass("tabFixed");
 				}
 			});
 
