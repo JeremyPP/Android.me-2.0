@@ -14,7 +14,7 @@ body {
 }
 
 .main-container {
-	height: calc(100% - 200px);
+	height: calc(100% - 150px);
 }
 
 
@@ -24,16 +24,16 @@ body {
 
 .profileHeaderContainer {
 	background: #6472cd;
-	height: 200px;
+	height: 150px;
 	margin-top: 64px;
 	position: relative;
 	box-sizing: border-box;
 }
 
 .profileInfoContainer {
-	height: 152px;
+	height: 102px;
 	width: 100%;
-	max-width: 480px;
+	max-width: 440px;
 	margin: 0 auto;
 }
 
@@ -53,21 +53,48 @@ body {
 }
 
 .profileInfoRight img {
-	width: 100px;
-	height: 100px;
+	width: 64px;
+	height: 64px;
 	border-radius: 50%;
-	border: 3px solid #eff3f6;
-	margin-top: 21px;
+	border: 2px solid #fff;
+	margin-top: 16px;
 }
 
 .profileName {
 	font-size: 24px;
-	color: rgba(255, 255, 255, 0.52);
+	color: rgba(255, 255, 255, 0.72);
 	padding: 0 16px;
 	padding-top: 24px;
 }
 
-.editProfileBtn {
+i.material-icons.profileMenuIcon {
+	font-size: 22px;
+	color: rgba(0, 0, 0, 0.24);
+	display: inline-block;
+	vertical-align: sub;
+	margin-left: 22px;
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
+i.material-icons.profileMenuIcon:hover {
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	color: rgba(0, 0, 0, 0.32);
+}
+
+.profileEmail {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.36);
+	padding: 0 16px;
+	padding-top: 4px;
+}
+
+/*.editProfileBtn {
 	height: 36px;
 	line-height: 37px;
 	padding: 0 24px;
@@ -81,7 +108,7 @@ body {
 	margin: 16px;
 	cursor: pointer;
 	margin-top: 24px;
-}
+}*/
 
 
 

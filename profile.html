@@ -63,15 +63,16 @@
 		
 		<section class="profileHeaderContainer">
 			<div class="profileInfoContainer">
-				<div class="profileInfoLeft">
-					<div class="profileName">Emmett	Stevenson</div>
-					<div class="profileActionsContainer">
-						<div class="editProfileBtn noUserSelect">Edit profile</div>
-					</div>
-				</div>
 				<div class="profileInfoRight">
 					<img src="users_images/Emmett_Stevenson.jpg" />
 					<div></div>
+				</div>
+				<div class="profileInfoLeft">
+					<div class="profileName">Emmett	Stevenson<i class="profileMenuIcon noUserSelect material-icons">more_vert</i></div>
+					<div class="profileEmail">emmetspamemail@gmail.com</div>
+					<!--<div class="profileActionsContainer">
+						<div class="editProfileBtn noUserSelect">Edit profile</div>
+					</div>-->
 				</div>
 			</div>
 			
@@ -262,7 +263,7 @@
 			// Fix tabs when scrolling
 			
 			$(window).scroll(function() {
-				if($(window).scrollTop() > 154) {
+				if($(window).scrollTop() > 102) {
 					$(".fixTheTabs").addClass("tabFixed");
 				} else {
 					$(".fixTheTabs").removeClass("tabFixed");
