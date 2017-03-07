@@ -1,4 +1,8 @@
-﻿$(document).ready(function() {
+﻿// Variables for search bar
+var searchBarInput = $("#searchBarInput");
+var clearSearchBtn = $(".clearSearchBarField");
+
+$(document).ready(function() {
 	
 	
 	// Header bar shadow on scroll
@@ -9,6 +13,15 @@
 			$(".page-header").css('box-shadow', 'none');
 		}
 	});*/
+	
+	// Show/hide clear search bar button on focus
+	searchBarInput.keyup(function() {
+		if( $(this).val().length === 0 ) {
+			clearSearchBtn.hide()
+		} else {
+			clearSearchBtn.show()
+		}
+	});
 
 
 	// Open/close responsive menu
@@ -50,3 +63,9 @@
 	};
 	
 });
+
+// Reset (clear) input field
+function resetInput() {
+	clearSearchBtn.hide();
+	searchBarInput.val('').focus();
+}

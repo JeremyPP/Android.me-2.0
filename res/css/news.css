@@ -3,7 +3,7 @@
 .main-container {
 	max-width: 840px;
 	margin: 0 auto;
-	margin-top: 90px;
+	margin-top:72px;
 	margin-bottom: 50px;
 }
 
@@ -19,6 +19,8 @@
 	box-sizing: border-box;
 	padding: 0 24px;
 	padding-right: 6px;
+	margin-top: 90px;
+	/*display: none;*/
 }
 
 .publishToggleContainer {
@@ -441,6 +443,7 @@
 		width: 100%;
 		border-radius: 0;
 		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+		margin-top: 56px;
 	}
     
     .header-extention {
