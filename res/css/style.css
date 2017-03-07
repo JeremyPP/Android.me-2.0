@@ -316,15 +316,20 @@ body {
 	margin-top: 11px;
 	border-radius: 2px;
 	box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.14);
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-ms-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-ms-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
 	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0
+}
+
+.searchBarMain.searchBarNotFocus {
+	background: rgba(255, 255, 255, 0.16);
+	box-shadow: none;
 }
 
 .searchBarMain i.searchBarSearchIcon {
@@ -334,6 +339,10 @@ body {
 	width: 52px;
 	text-align: center;
 	color: rgba(68, 68, 68, 0.5);
+}
+
+i.searchBarSearchIcon.searchBarIconNotFocus {
+	color: rgba(255, 255, 255, 0.52);
 }
 
 .searchBarMain input#searchBarInput {
@@ -363,6 +372,10 @@ body {
 
 .searchBarMain i.clearSearchBarField:hover {
 	cursor: pointer;
+}
+
+.searchBarInputNotFocus::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.52);
 }
 
 

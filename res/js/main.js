@@ -22,6 +22,17 @@ $(document).ready(function() {
 			clearSearchBtn.show()
 		}
 	});
+	searchBarInput.focus(function() {
+		$("#searchBarInput").removeClass("searchBarInputNotFocus");
+		$(".searchBarSearchIcon").removeClass("searchBarIconNotFocus");
+		$(".searchBarMain").removeClass("searchBarNotFocus");
+	});
+
+	searchBarInput.blur(function() {
+		$("#searchBarInput").addClass("searchBarInputNotFocus");
+		$(".searchBarSearchIcon").addClass("searchBarIconNotFocus");
+		$(".searchBarMain").addClass("searchBarNotFocus");
+	});
 
 
 	// Open/close responsive menu
