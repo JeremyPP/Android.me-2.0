@@ -35,6 +35,7 @@ body {
 	width: 100%;
 	max-width: 440px;
 	margin: 0 auto;
+	
 }
 
 .profileInfoLeft,
@@ -45,6 +46,7 @@ body {
 
 .profileInfoLeft {
 	width: 72%;
+	position: relative;
 }
 
 .profileInfoRight {
@@ -92,6 +94,44 @@ i.material-icons.profileMenuIcon:hover {
 	color: rgba(255, 255, 255, 0.36);
 	padding: 0 16px;
 	padding-top: 4px;
+}
+
+
+/* Profile option menu*/	/* Move to main css file for better modularity? */
+
+.profileOptionMenuMain {
+	position: absolute;
+	z-index: 999;
+	background: white;
+	top: 24px;
+	padding: 8px 0;
+	max-height: 340px;
+	min-width: 168px;
+	overflow: auto;
+	border-radius: 2px;
+	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+	display: none;
+	right: 48px;
+	text-align: left;
+}
+
+.profileOptionMenuMain a {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.84);
+}
+
+.profileOptionsOption {
+	height: 48px;
+	padding: 0 24px;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.84);
+	box-sizing: border-box;
+	line-height: 48px;
+	cursor: pointer;
+}
+
+.profileOptionsOption:hover {
+	background: #eee;
 }
 
 

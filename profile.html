@@ -77,7 +77,16 @@
 				<div class="profileInfoLeft">
 					<div class="profileName">Emmett	Stevenson<i class="profileMenuIcon noUserSelect material-icons">more_vert</i></div>
 					<div class="profileUserStatus">Reader</div>
+					
+					<!-- Profile options menu -->
+					<div class="profileOptionMenuMain" style="display:none;">
+						<div class="profileOptionsOption">Edit profile</div>
+						<div class="profileOptionsOption">Settings</div>
+						<a href="index.html"><div class="profileOptionsOption">Log out</div></a>
+					</div>
 				</div>
+				
+				
 			</div>
 			
 			<!-- Tabs -->
@@ -230,6 +239,34 @@
         <script src="res/js/main.js"></script>
 		
 		<script>
+		
+			// disable/enable scroll when menu is open or closed
+			// MOVE TO MAIN.JS FOR BETTER MODULARITY.
+			$.fn.disableScroll = function() {
+				window.oldScrollPos = $(window).scrollTop();
+
+				$(window).on('scroll.scrolldisabler',function ( event ) {
+					$(window).scrollTop( window.oldScrollPos );
+					event.preventDefault();
+				});
+			};
+			$.fn.enableScroll = function() {
+				$(window).off('scroll.scrolldisabler');
+			};
+		
+			// Toggle profile options menu
+			$(document).ready(function(){
+				$("html").click(function(){
+					$(".profileOptionMenuMain").hide();
+					$(this).enableScroll();
+				});
+				$(".profileMenuIcon").click(function(event){
+					event.stopPropagation();
+					$(".profileOptionMenuMain").show();
+					$("body").disableScroll();
+				});
+			});
+			
 
 			// Toggle profile tabs
 			
