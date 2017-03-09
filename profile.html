@@ -76,7 +76,7 @@
 				</div>
 				<div class="profileInfoLeft">
 					<div class="profileName">Emmett	Stevenson<i class="profileMenuIcon noUserSelect material-icons">more_vert</i></div>
-					<div class="profileUserStatus">Reader</div>
+					<div class="profileUserStatus">Contributor</div>
 					
 					<!-- Profile options menu -->
 					<div class="profileOptionMenuMain" style="display:none;">
@@ -215,7 +215,22 @@
 			
 			<!-- Tab 2 content -->
 			<div class="tabContentContainer tab2content" style="display:none;">
-				All, pending review, published.
+				<div class="contributorPanelMain">
+					
+					<div class="myArticlesMenuTrigger">
+						<div class="triggerLabelSelection">All articles</div>
+						<i class="material-icons">arrow_drop_down</i>
+					</div>
+					<div class="myArticlesMenu">
+						<div class="myArticlesMenuItem">All articles</div>
+						<div class="myArticlesMenuItem">Published articles</div>
+						<div class="myArticlesMenuItem">Pending approval</div>
+					</div>
+					
+					<a href="post.html" class="newArticleBtn"><div>New article</div></a>
+					
+				</div>
+				<!-- All / My published articles / Pending approval -->
 			</div>
 			
 			<!-- Tab 3 content -->
@@ -263,6 +278,19 @@
 				$(".profileMenuIcon").click(function(event){
 					event.stopPropagation();
 					$(".profileOptionMenuMain").show();
+					$("body").disableScroll();
+				});
+			});
+			
+			// Toggle my Articles menu
+			$(document).ready(function(){
+				$("html").click(function(){
+					$(".myArticlesMenu").hide();
+					$(this).enableScroll();
+				});
+				$(".myArticlesMenuTrigger").click(function(event){
+					event.stopPropagation();
+					$(".myArticlesMenu").show();
 					$("body").disableScroll();
 				});
 			});
