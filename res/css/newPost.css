@@ -324,6 +324,8 @@ span.news_tags:hover {
 	float: left;
 	width: 100%;
 	box-sizing: border-box;
+	overflow-X: scroll;
+	max-height: calc(100% - 104px);
 }
 
 .modal .modalFooter {
@@ -370,6 +372,27 @@ span.news_tags:hover {
 .modal .modalFooter .modalActionBtn:active {
 	background: rgba(0, 0, 0, 0.1);
 	color: #0097A7;
+}
+
+
+/* Custom scrollbar for modal */
+
+.modal .modalContainer::-webkit-scrollbar {
+	width: 12px;
+}
+ 
+.modal .modalContainer::-webkit-scrollbar-track {
+	background: none;
+}
+ 
+.modal .modalContainer::-webkit-scrollbar-thumb {
+	background: #e8e8e8;
+	border-radius: 2px;
+	border: 4px solid #fff;
+}
+
+.modal .modalContainer::-webkit-scrollbar-thumb:hover {
+	background: #a7a7a7;
 }
 
 
