@@ -17,9 +17,10 @@
 		<!-- Import Material Icons -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
-		<!-- Import Roboto font (Google font) -->
+		<!-- Import Roboto fonts (Google font) -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:200,300,400" rel="stylesheet">
+		
         <!-- Page info -->
         <title>It's Apple's fault that the Nexus 6 doesn't have a fingerprint sensor | Android.me</title>	<!-- Dynamic -->
         <meta name="description" content="Former Motorola CEO Dennis Woodside has confessed that
@@ -56,14 +57,11 @@
 			</div>
             
              <!-- nav menu -->
-            <nav class="header-menu">       <!-- TO-DO: links to the other pages -->
+            <nav class="header-menu">
 				<div class="respLogo"></div>
                 <ul>
                     <li><a href="index.html">News</a></li>
 					<li><a href="q_and_a.html">Q&A</a></li>
-                    <!--<li><a href="#">App</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">App Review</a></li>-->
                     <li><a href="login.html">Profile</a></li>
                 </ul>
             </nav>
@@ -92,9 +90,12 @@
 				<a href="newsEdit.html"><div class="editArticleBtn">Edit</div></a>
 				<div class="InfoTextAdminPanel">Last edit: less than a minute ago.</div>
 			</div>
+			
+			<!-- Contributor panel -->
+			<div></div>
         
-            <!-- Vote system -->
-            <div class="vote-container">       <!-- Back-end: TO BE IMPLEMENTED! -->
+            <!-- Vote system 
+            <div class="vote-container">
                 <button class="upVote">
 					<i class="material-icons">thumb_up</i>
 				</button>
@@ -102,7 +103,7 @@
 				<button class="downVote voteNotActive" data-tooltip="You need to be a registered user to down vote this article.">
 					<i class="material-icons">thumb_down</i>
 				</button>
-            </div>
+            </div>-->
         
             <!-- Article content -->
             <article>
@@ -114,16 +115,28 @@
                     <h1>It's Apple's fault that the Nexus 6 doesn't have a fingerprint sensor</h1>       <!-- PLACEHOLDER -->
                     
                     <!-- Article info (Author, tags, date, etc...) -->
-                    <div class="article-info">       <!-- PLACEHOLDERS -->
-                        By&nbsp;
-                        <a href="tags2.php?writer=theverge">Jérémy Pougnet</a>
-                        &nbsp;&nbsp;|&nbsp;&nbsp;Posted:&nbsp;
-                        <a href="tags2.php?date=01/26/2015">Mon, Jan 26, 2015</a>
-                        &nbsp;&nbsp;|&nbsp;&nbsp;Tags:&nbsp;
-                        <span><a class="news_tags" href="#" tag="NEXUS">NEXUS</a></span>
-                        <a class="news_tags" href="#" tag="OTHERS">APPLE</a>
-                        <a class="news_tags" href="#" tag="MOTOROLA">MOTOROLA</a>
-                    </div>
+                    <div class="articleInfoBar"> <!-- Make it responsive! -->
+						<div class="articleInfoBarLeftContainer">
+							<div class="articleInfoAuthor">By <a href="#">Jérémy Pougnet</a></div>
+							<div class="articleTopSectionSep">/</div>
+							<!-- Show full post date only after a24h.
+							eg: Posted 2 minutes ago / Postd 2 hours ago / Posted on Mon, Jan 26, 2015 -->
+							<div class="articleInfoPostTime">Posted 2 hours ago</div>
+							<div class="articleTopSectionSep">/</div>
+							<div class="articleInfoTags">
+								<a href="#">Nexus</a>
+								<a href="#">Apple</a>
+								<a href="#">Motorola</a>
+							</div>
+						</div>
+						<div class="articleInfoBarRightContainer">
+							<div class="articleInfoLikes">17</div>
+							<div class="articleInfoLikesBtn">
+								<i class="material-icons">favorite_border</i>
+								<i class="material-icons" style="display:none;">favorite</i>
+							</div>
+						</div>
+					</div>
                     
                 </header>
                     
