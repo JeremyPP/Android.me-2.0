@@ -2,6 +2,7 @@
 var searchBarInput = $("#searchBarInput");
 var clearSearchBtn = $(".clearSearchBarField");
 
+
 $(document).ready(function() {
 	
 	
@@ -14,14 +15,25 @@ $(document).ready(function() {
 		}
 	});*/
 	
+	
 	// Show/hide clear search bar button on focus
 	searchBarInput.keyup(function() {
 		if( $(this).val().length === 0 ) {
-			clearSearchBtn.hide()
+			clearSearchBtn.hide();
 		} else {
-			clearSearchBtn.show()
+			clearSearchBtn.show();
 		}
+		
+		if( $(this).val().length >= 2 ) {
+			$(".searchAutocompleteMain").show();
+			$(".searchBarMain").addClass("withSugestions");
+		} else {
+			$(".searchAutocompleteMain").hide();
+			$(".searchBarMain").removeClass("withSugestions");
+		}
+		
 	});
+	
 	searchBarInput.focus(function() {
 		$("#searchBarInput").removeClass("searchBarInputNotFocus");
 		$(".searchBarSearchIcon").removeClass("searchBarIconNotFocus");
@@ -29,12 +41,20 @@ $(document).ready(function() {
 	});
 
 	searchBarInput.blur(function() {
-		$("#searchBarInput").addClass("searchBarInputNotFocus");
-		$(".searchBarSearchIcon").addClass("searchBarIconNotFocus");
-		$(".searchBarMain").addClass("searchBarNotFocus");
+		$(".searchAutocompleteMain").hide();
+		$(".searchBarMain").removeClass("withSugestions");
+		if(searchBarInput.val().length === 0 ) {
+			$("#searchBarInput").addClass("searchBarInputNotFocus");
+			$(".searchBarSearchIcon").addClass("searchBarIconNotFocus");
+			$(".searchBarMain").addClass("searchBarNotFocus");
+		} else {
+			$("#searchBarInput").removeClass("searchBarInputNotFocus");
+			$(".searchBarSearchIcon").removeClass("searchBarIconNotFocus");
+			$(".searchBarMain").removeClass("searchBarNotFocus");
+		}
 	});
 
-
+	
 	// Open/close responsive menu
 	$(".resp-name-logo, .hamburgerButton").click(function(){
 		$(".header-menu").css("marginLeft", "0");
@@ -75,8 +95,11 @@ $(document).ready(function() {
 	
 });
 
+
 // Reset (clear) input field
 function resetInput() {
 	clearSearchBtn.hide();
+	$(".searchAutocompleteMain").hide();
+	$(".searchBarMain").removeClass("withSugestions");
 	searchBarInput.val('').focus();
 }

@@ -379,6 +379,52 @@ i.searchBarSearchIcon.searchBarIconNotFocus {
 }
 
 
+/* Search autocomplete (sugestions) */
+
+.searchBarMain.withSugestions {
+	height: initial;
+}
+
+.searchBarMain.withSugestions #searchBarInput {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.searchAutocompleteMain {
+	background: white;
+	position: relative;
+	width: 100%;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	margin-bottom: -16px;
+	min-height: 64px;
+	border-top: 1px solid #eee;
+}
+
+.searchAutocompleteMain ul {
+	list-style: none;
+	padding: 8px 0;
+	margin: 0;
+}
+
+.searchAutocompleteMain li {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 52px;
+	color: rgba(0, 0, 0, 0.72);
+}
+
+.searchAutocompleteMain li:hover {
+	background: #eee;
+	cursor: pointer;
+}
+
+.searchAutocompleteMain li span {
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+
 
 /* ========== Cards structure ========== */
 
