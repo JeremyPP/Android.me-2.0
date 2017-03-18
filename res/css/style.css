@@ -396,7 +396,6 @@ i.searchBarSearchIcon.searchBarIconNotFocus {
 	width: 100%;
 	border-bottom-left-radius: 2px;
 	border-bottom-right-radius: 2px;
-	margin-bottom: -16px;
 	min-height: 64px;
 	border-top: 1px solid #eee;
 }
