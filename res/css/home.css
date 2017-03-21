@@ -16,31 +16,6 @@ body {
 
 
 
-/* ========== Header image (Logo) ========== */
-
-.large-logo-header {
-	background: #6472cd;
-	width: 100%;
-	height: 280px;
-	margin-top: 64px;
-	position: fixed;
-	
-	display: none;
-}
-
-.large-logo-header img {
-	position: absolute;
-	width: 260px;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	margin-top: 86px;
-}
-
-
-
 /* ========== Header Banner ========== */
 
 .headerBannerHero {
@@ -57,7 +32,7 @@ body {
 	position: relative;
 }
 
-.topBannerCOntentContainer {
+.topBannerContentContainer {
 	z-index: 9;
 	position: absolute;
 	margin-top: 52px;
@@ -65,7 +40,7 @@ body {
 	max-width: 80%;
 }
 
-.topBannerCOntentContainer h1 {
+.topBannerContentContainer h1 {
 	color: #fff;
 	font-size: 40px;
 	margin: 0;
@@ -75,7 +50,7 @@ body {
 	line-height: 50px;
 }
 
-.topBannerCOntentContainer p {
+.topBannerContentContainer p {
 	color: rgba(255, 255, 255, 0.64);
 	font-size: 18px;
 	line-height: 28px;
@@ -149,12 +124,108 @@ body {
 
 
 
+/* ========== Featured News Banner ========== */
+
+.featuredNewsBanner {
+	max-width: 940px;
+	margin: 0 auto;
+	margin-top: 88px;
+	height: 230px;
+	border-radius: 6px;
+	margin-bottom: 4px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.15);
+	position: relative;
+	background-size: cover;
+	background-position-y: center;
+	margin-bottom: 10px;
+}
+
+.featuredNewsSubcontainer {
+	z-index: 9;
+	position: absolute;
+	margin-top: 52px;
+	margin-left: 52px;
+	max-width: 100%;
+	margin-right: 52px;
+	margin-bottom: 52px;
+	height: 126px;
+	width: calc(100% - 104px);
+}
+
+.featuredNewsSubcontainer h1 {
+    color: #fff;
+    font-size: 34px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 44px;
+}
+
+.featuredNewsSubcontainer p {
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 500px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.featuredNewsSubcontainer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.bannerFeaturedButton {
+	text-align: right;
+	position: absolute;
+	bottom: -26px;
+	right: -26px;
+}
+
+.bannerFeaturedButton a {
+	color: transparent;
+}
+
+.bannerFeaturedButton a.featuredLink div {
+	background: #4DD0E1;
+	height: 36px;
+	line-height: 37px;
+	padding: 0 24px;
+	border-radius: 2px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	color: rgb(255, 255, 255);
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+	display: inline-block;
+}
+
+.bannerFeaturedButton a.featuredLink div:hover {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    cursor: pointer;
+    background: #26C6DA;
+}
+
+.featuredBannerColorOverlay {
+	background: rgba(156, 39, 176, 0.44);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	border-radius: 6px;
+}
+
+
 
 /* ========== Containers ========== */
 
 .main-container {
 	width: 100%;
-	/*margin-top: 344px;*/
 	position: absolute;
 	background: #EFF3F6;
 }
@@ -297,7 +368,7 @@ body {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
  }
  
- .news-card h1 {
+.news-card h1 {
 	margin: 0;
 	padding: 16px;
 	font-size: 18px;
@@ -305,23 +376,13 @@ body {
 	color: rgba(0, 0, 0, 0.84);
 	margin-top: -4px;
 	line-height: 23px;
- }
- 
- .news-img {
+}
+
+.news-img {
 	width: 100%;
 	border-top-right-radius: 2px;
 	border-top-left-radius: 2px;
- }
- 
-/*.news-content-preview {
-	padding: 16px;
-	margin: 0;
-	margin-top: -4px;
-	font-size: 14px;
-	line-height: 18px;
-	color: rgba(0, 0, 0, 0.52);
-	font-weight: 500;
-}*/
+}
 
 .news-info {
 	text-align: right;
@@ -407,7 +468,8 @@ body {
 
 @media screen and (max-width: 960px) {
 	
-	.headerBannerHero {
+	.headerBannerHero,
+	.featuredNewsBanner {
 		width: 96%;
 	}
 	
@@ -419,6 +481,11 @@ body {
 }
 
 @media screen and (max-width: 840px) {
+	
+	.featuredNewsSubcontainer h1 {
+		font-size: 24px;
+		line-height: 34px;
+	}
 	
 	.news-col {
 		width: 50%;
@@ -433,20 +500,34 @@ body {
 		height: 320px;
 	}
 	
-	.topBannerCOntentContainer {
+	.featuredNewsBanner {
+		margin-top: 72px;
+		height: 252px;
+	}
+	
+	.topBannerContentContainer {
 		margin-top: 44px;
 		margin-left: 44px;
 		max-width: 88%;
 	}
 	
-	.topBannerCOntentContainer h1 {
+	.featuredNewsSubcontainer {
+		margin: 44px;
+		width: calc(100% - 88px);
+	}
+	
+	.topBannerContentContainer h1 {
 		font-size: 30px;
 		line-height: 40px;
 	}
 	
-	.topBannerCOntentContainer p {
+	.topBannerContentContainer p {
 		font-size: 16px;
 		line-height: 24px;
+	}
+	
+	.bannerFeaturedButton {
+		bottom: -62px;
 	}
 	
 }
@@ -458,11 +539,31 @@ body {
 		margin-top: 68px;
 	}
 	
+	.featuredNewsBanner {
+		margin-top: 68px;
+		height: 224px;
+	}
+	
+	.featuredNewsSubcontainer {
+		margin: 24px;
+		width: calc(100% - 48px);
+		height: calc(100% - 48px);
+	}
+	
+	.bannerFeaturedButton {
+		right: 0;
+		bottom: 0;
+	}
+	
+	.featuredBannerColorOverlay {
+		background: rgba(156, 39, 176, 0.64);
+	}
+	
 	.bannerCtaButtons {
 		margin-top: 28px;
 	}
 	
-	.topBannerCOntentContainer {
+	.topBannerContentContainer {
 		margin: 0 auto;
 		width: 100%;
 		height: 100%;
@@ -479,12 +580,21 @@ body {
 
 @media screen and (max-width: 400px) {
 	
-	.topBannerCOntentContainer h1 {
+	.featuredNewsBanner {
+		height: 200px;
+	}
+	
+	.topBannerContentContainer h1 {
 		font-size: 24px;
 		line-height: 32px;
 	}
 	
-	.topBannerCOntentContainer p {
+	.featuredNewsSubcontainer h1 {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	
+	.topBannerContentContainer p {
 		font-size: 14px;
 		line-height: 21px;
 		margin-top: 8px;

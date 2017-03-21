@@ -70,14 +70,11 @@
 			</div>
             
              <!-- nav menu -->
-            <nav class="header-menu">       <!-- TO-DO: links to the other pages -->
+            <nav class="header-menu">
 				<div class="respLogo"></div>
                 <ul>
                     <li><a href="index.html">News</a></li>
 					<li><a href="q_and_a.html">Q&A</a></li>
-                    <!--<li><a href="#">App</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">App Review</a></li>-->
                     <li><a href="login.html">Profile</a></li>
                 </ul>
             </nav>
@@ -87,14 +84,14 @@
         <!-- Shadow overlay for the responsive menu -->
         <div class="responsive-menu-overlay"></div>
 		
-		<!-- Header image (logo) section -->
+		<!-- Header image (logo) section 
 		<section class="large-logo-header">
 			<img src="res/img/logo_large.png" alt="">
-		</section>
+		</section>-->
 		
 		<!-- Top banner section v2 -->
-		<section class="headerBannerHero">
-			<div class="topBannerCOntentContainer">
+		<section class="headerBannerHero" style="display:none;"> <!-- display set to none if another banner is visible -->
+			<div class="topBannerContentContainer">
 				<h1>Experience the News like never before.</h1>
 				<p>A new way to stay informed and explore the world of Google's
 				mobile platform. Be part of this amazing community!</p>
@@ -113,6 +110,24 @@
 		<!-- Article cards container -->
         <section class="main-container">
 			<div class="article-cards-container">
+			
+				<!-- Featured article Banner -->
+				<!-- Background is set inline since it's dynamic -->
+				<!-- NEED BETTER HTML STRUCTURE => TO BE REDONE!!! -->
+				<div class="featuredNewsBanner" style="background-image: url(articles_images/Google_releases_Android_O_to_developers_promising_better_battery_life_and_notifications.jpg);">
+					<div class="featuredNewsSubcontainer">
+						<a href="article.html">
+							<h1>Google releases Android O to developers, promising better battery life and notifications</h1>
+						</a>
+						<p>By Jérémy Pougnet</p>
+						<div class="bannerFeaturedButton">
+							<a href="article.html" class="featuredLink">
+								<div>Read more</div>
+							</a>
+						</div>
+					</div>
+					<div class="featuredBannerColorOverlay"></div>
+				</div>
 				
 				<!--  -->
 				<div class="filter-container">
