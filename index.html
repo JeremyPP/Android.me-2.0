@@ -69,7 +69,7 @@
 				</div>
 			</div>
             
-             <!-- nav menu -->
+			<!-- nav menu -->
             <nav class="header-menu">
 				<div class="respLogo"></div>
                 <ul>
@@ -78,42 +78,62 @@
                     <li><a href="login.html">Profile</a></li>
                 </ul>
             </nav>
-			
         </header>
         
         <!-- Shadow overlay for the responsive menu -->
         <div class="responsive-menu-overlay"></div>
 		
-		<!-- Header image (logo) section 
-		<section class="large-logo-header">
-			<img src="res/img/logo_large.png" alt="">
-		</section>-->
-		
-		<!-- Top banner section v2 -->
-		<section class="headerBannerHero" style="display:none;"> <!-- display set to none if another banner is visible -->
-			<div class="topBannerContentContainer">
-				<h1>Experience the News like never before.</h1>
-				<p>A new way to stay informed and explore the world of Google's
-				mobile platform. Be part of this amazing community!</p>
-				<div class="bannerCtaButtons">
-					<a href="login.html	" class="ctaOne">
-						<div>Join Now</div>
-					</a>
-					<a href="" class="ctaTwo">
-						<div>Learn more</div>
-					</a>
-				</div>
-			</div>
-			<div class="topColorOverlay"></div>
-		</section>
+		<!-- Separate content from header (64px) -->
+		<div class="headerSeparatorFIx"></div>
 		
 		<!-- Article cards container -->
         <section class="main-container">
 			<div class="article-cards-container">
 			
+				<!-- Banner admin panel -->
+				<!-- Make it responsive! -->
+				<div class="adminBannerPanelCard">
+					<div class="bannerPanelSection">
+						<div class="ig-control">
+							<input name="group" type="radio" id="1" class="ig-control__radio" checked>
+							<label for="1">Create account CTA</label>
+						</div>
+					</div>
+					<hr>
+					<div class="bannerPanelSection">
+						<div class="ig-control">
+							<input name="group" type="radio" id="2" class="ig-control__radio">
+							<label for="2">Featured news</label>
+						</div>
+						<div class="bannerPanelIdSelector">
+							<span>Article ID:</span>
+							<input type="number" class="idSelectorInput" placeholder="42">
+						</div>
+					</div>
+					<hr>
+					<div class="bannerPanelSection">
+						<div class="ig-control">
+							<input name="group" type="radio" id="3" class="ig-control__radio">
+							<label for="3">Event</label>
+						</div>
+						<div class="bannerPanelIdSelector">
+							<span>Image URL:</span>
+							<input type="text" class="urlSelectorInput" placeholder="/res/img/banners/myimagename.png">
+						</div>
+						<div class="bannerPanelIdSelector">
+							<span>Page URL:</span>
+							<input type="text" class="urlSelectorInput" placeholder="/tags.php?tag=MWC">
+						</div>
+					</div>
+					<hr>
+					<div class="bannerPanelFooterMain">
+						<div class="cancelBannerChangesBtn">Cancel</div>
+						<div class="saveBannerChangesBtn">Save</div>
+					</div>
+				</div>
+			
 				<!-- Featured article Banner -->
 				<!-- Background is set inline since it's dynamic -->
-				<!-- NEED BETTER HTML STRUCTURE => TO BE REDONE!!! -->
 				<div class="featuredNewsBanner" style="background-image: url(articles_images/Google_releases_Android_O_to_developers_promising_better_battery_life_and_notifications.jpg);">
 					<div class="featuredNewsSubcontainer">
 						<a href="article.html">
@@ -129,7 +149,25 @@
 					<div class="featuredBannerColorOverlay"></div>
 				</div>
 				
-				<!--  -->
+				<!-- Top banner section -->
+				<section class="headerBannerHero" style="display:none;"> <!-- display set to none if another banner is visible -->
+					<div class="topBannerContentContainer">
+						<h1>Experience the News like never before.</h1>
+						<p>A new way to stay informed and explore the world of Google's
+						mobile platform. Be part of this amazing community!</p>
+						<div class="bannerCtaButtons">
+							<a href="login.html	" class="ctaOne">
+								<div>Join Now</div>
+							</a>
+							<a href="" class="ctaTwo">
+								<div>Learn more</div>
+							</a>
+						</div>
+					</div>
+					<div class="topColorOverlay"></div>
+				</section>				
+				
+				<!-- News filters -->
 				<div class="filter-container">
 					
 					<div class="latestInfoTitle">Latest News</div>
@@ -165,11 +203,12 @@
 					</div>
 				</div>
 				
-				<!--  -->
+				<!-- News list -->
 				<div class="card-list">
 					
 					<div class="news-col posts0">
 						
+						<!-- News card -->
 						<div class="news-card">
 							<a href="article.html">
 								<img class="news-img" src="articles_images/previews/The_fingerprint_company_that_Samsung_never_bought_is_now_everywhere.png" alt="">
@@ -181,6 +220,7 @@
 								</div>
 							</a>
 						</div>
+						<!-- /News card -->
 						
 						<div class="news-card">
 							<a href="">
@@ -259,12 +299,14 @@
 					</div>
 				</div>
 				
+				<!-- Load more articles -->
 				<div class="loadmore-btn-container">
 					<button type="button">Load more</button>
 				</div>
 				
 			</div>
 			
+			<!-- Footer -->
 			<footer class="page-footer">
 				<div class="copyright">Android is a trademark of Google Inc.<br>© 2013 - 2017 Android.me News. All Rights Reserved.</div>
 				<div class="footerLinks">

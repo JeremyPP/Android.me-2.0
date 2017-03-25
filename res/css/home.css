@@ -14,6 +14,12 @@ body {
 	outline: none;
 }
 
+.headerSeparatorFIx {
+	height: 64px;
+	width: 100%;
+	background: none;
+}
+
 
 
 /* ========== Header Banner ========== */
@@ -21,13 +27,13 @@ body {
 .headerBannerHero {
 	max-width: 940px;
 	margin: 0 auto;
-	margin-top: 88px;
+	margin-top: 24px;
 	background: url(../img/banner_hero.jpg);
 	height: 360px;
 	background-position-y: -270px;
 	background-position-x: -112px;
 	border-radius: 6px;
-	margin-bottom: 4px;
+	margin-bottom: 10px;
 	box-shadow: 0 1px 1px rgba(0,0,0,.15);
 	position: relative;
 }
@@ -130,7 +136,7 @@ body {
 	max-width: 940px;
 	width: 100%;
 	margin: 0 auto;
-	margin-top: 88px;
+	margin-top: 24px;
 	position: relative;
 	padding: 52px;
 	background-size: cover;
@@ -205,6 +211,188 @@ body {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 	cursor: pointer;
 	background: #26C6DA;
+}
+
+
+
+/* ========== Banner admin panel ========== */
+
+.adminBannerPanelCard {
+	background: #333333;
+	max-width: 940px;
+	margin: 0 auto;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	box-sizing: border-box;
+	padding: 0 8px;
+	margin-top: 24px;
+	margin-bottom: 10px;
+	
+	/* Only visible for the admin */
+	display: none;
+}
+
+.adminBannerPanelCard hr {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: none;
+	margin: 0;
+	padding: 0;
+}
+
+.adminBannerPanelCard .bannerPanelSection {
+	height: 46px;
+}
+
+.bannerPanelFooterMain {
+	text-align: right;
+}
+
+.bannerPanelFooterMain .saveBannerChangesBtn,
+.bannerPanelFooterMain .cancelBannerChangesBtn {
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 36px;
+	padding: 0 16px;
+	line-height: 37px;
+	border-radius: 2px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	user-select: none;
+}
+
+.bannerPanelFooterMain .saveBannerChangesBtn {
+	color: #FFEB3B;
+}
+
+.bannerPanelFooterMain .cancelBannerChangesBtn {
+	color: #eee;
+	margin-right: 4px;
+}
+
+.saveBannerChangesBtn:hover,
+.cancelBannerChangesBtn:hover {
+	background: rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+}
+
+
+/* Radio buttons */
+.ig-control {
+	margin: 0;
+	display: inline-block;
+	height: 46px;
+	line-height: 46px;
+	padding: 0 16px;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.ig-control__radio:not(:checked),
+.ig-control__radio:checked {
+	opacity: 0;
+	position: absolute;
+	margin: 0;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	left: 0;
+	pointer-events: none;
+}
+
+.ig-control__radio ~ label {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	height: 20px;
+	line-height: 22px;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.36);
+	padding-left: 36px;
+	font-weight: 400;
+}
+
+.ig-control__radio ~ label:before,
+.ig-control__radio ~ label:after {
+	position: absolute;
+	content: '';
+	width: 16px;
+	height: 16px;
+	left: 0;
+	border: 2px solid transparent;
+	border-radius: 50% 50%;
+}
+
+.ig-control__radio ~ label:before {
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	transition: all .2s ease-in;
+}
+
+.ig-control__radio:not(:checked) ~ label:before {
+	transform: scale(0);
+}
+
+.ig-control__radio:not(:checked) ~ label:after {
+	border: 2px solid #757575;
+}
+
+.ig-control__radio:checked ~ label:before {
+	border: 2px solid #4DD0E1;
+	background-color: #4DD0E1;
+	transform: scale(0.5);
+}
+
+.ig-control__radio:checked ~ label:after {
+	border: 2px solid #4DD0E1;
+}
+
+
+/* Banner settings */
+.bannerPanelIdSelector {
+	display: inline-block;
+	height: 100%;
+	line-height: 45px;
+	border-left: 1px dashed rgba(255, 255, 255, 0.1);
+	padding-left: 24px;
+	margin: 0 20px;
+	margin-right: 4px;
+}
+
+.bannerPanelIdSelector span {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.24);
+	font-weight: 400;
+}
+
+.bannerPanelIdSelector .idSelectorInput,
+.bannerPanelIdSelector .urlSelectorInput {
+	border: none;
+	height: 32px;
+	margin-left: 8px;
+	background: #333;
+	border-radius: 2px;
+	padding: 0 8px;
+	color: #fafafa;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	line-height: 29px;
+	outline: none;
+}
+
+.bannerPanelIdSelector .idSelectorInput {
+	width: 72px;
+}
+
+.bannerPanelIdSelector .urlSelectorInput {
+	width: 240px;
 }
 
 
@@ -461,7 +649,7 @@ body {
 	}
 	
 	.featuredNewsBanner {
-		margin-top: 84px;
+		margin-top: 20px;
 	}
 	
 	.tagSelectMenu {
@@ -474,7 +662,7 @@ body {
 @media screen and (max-width: 840px) {
 	
 	.featuredNewsBanner {
-		margin-top: 72px;
+		margin-top: 8px;
 	}
 	
 	.featuredNewsSubcontainer h1 {
@@ -491,7 +679,7 @@ body {
 @media screen and (max-width: 600px) {
 	
 	.headerBannerHero {
-		margin-top: 72px;
+		margin-top: 8px;
 		height: 320px;
 	}
 	
@@ -525,12 +713,12 @@ body {
 	
 	.headerBannerHero {
 		height: 284px;
-		margin-top: 68px;
+		margin-top: 4px;
 	}
 	
 	.featuredNewsBanner {
 		padding: 24px;
-		margin-top: 68px;
+		margin-top: 4px;
 	}
 	
 	.featuredBannerColorOverlay {
