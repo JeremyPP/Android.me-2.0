@@ -268,8 +268,11 @@
 }
 
 .articleInfoBarLeftContainer .articleInfoTags a {
-	color: #29d3e8;
+	color: #ffffff;
 	margin-right: 6px;
+	padding: 2px 8px;
+	border-radius: 20px;
+	background: #BDBDBD;
 	-webkit-transition: all 150ms ease-in-out;
 	-moz-transition: all 150ms ease-in-out;
 	-ms-transition: all 150ms ease-in-out;
@@ -278,9 +281,45 @@
 }
 
 .articleInfoBarLeftContainer .articleInfoTags a:hover {
-	color: #00BCD4;
 	cursor: pointer;
+	background: #9E9E9E;
 }
+
+
+/* Tag colors (1 to 4) */
+
+.articleInfoBarLeftContainer .articleInfoTags a:nth-child(1) {
+	background: #FFCA28;
+}
+
+.articleInfoBarLeftContainer .articleInfoTags a:nth-child(1):hover {
+	background: #FFC107;
+}
+
+.articleInfoBarLeftContainer .articleInfoTags a:nth-child(2) {
+	background: #AB47BC;
+}
+
+.articleInfoBarLeftContainer .articleInfoTags a:nth-child(2):hover {
+	background: #9C27B0;
+}
+
+.articleInfoBarLeftContainer .articleInfoTags a:nth-child(3) {
+	background: #26C6DA;
+}
+
+.articleInfoBarLeftContainer .articleInfoTags a:nth-child(3):hover {
+	background: #00BCD4;
+}
+
+.articleInfoBarLeftContainer .articleInfoTags a:nth-child(4) {
+	background: #EC407A;
+}
+
+.articleInfoBarLeftContainer .articleInfoTags a:nth-child(4):hover {
+	background: #E91E63;
+}
+
 
 .articleInfoBarRightContainer .articleInfoLikes {
 	font-size: 16px;
