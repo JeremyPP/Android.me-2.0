@@ -58,72 +58,47 @@
 				<div class="respLogo"></div>
                 <ul>
                     <li><a href="index.html">News</a></li>
-					<li><a href="q_and_a.html">Q&A</a></li>
-                    <!--<li><a href="#">App</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">App Review</a></li>-->
-                    <li><a href="">Profile</a></li>
+					<li><a href="reviews.html">Reviews</a></li>
+                    <!-- <li><a href="">Profile</a></li>-->
+
+					<!-- Profile menu -->
+					<li class="profileAvatarContainer">
+						<div class="profileAvatar">
+							<img src="http://bit.ly/2tFWqOx" class="profilePicture">
+						</div>
+						
+						<!-- Profile card -->
+						<div class="profileCard">
+							<div class="profCard-header">
+								<div class="profHeader-username">Riley Blue</div>
+								<div class="profHeader-status">Contributor</div>
+							</div>
+							<div class="profCard-menu">
+								<a>Feed</a>
+								<a>My articles</a>
+								<a>Favorites</a>
+							</div>
+							<div class="profCard-options">
+								<a><i class="material-icons">edit</i></a>
+								<a><i class="material-icons">settings</i></a>
+								<a><i class="material-icons">exit_to_app</i></a>
+							</div>
+						</div>
+					</li>
                 </ul>
             </nav>
 			
         </header>
-		
-		<section class="profileHeaderContainer">
-			<div class="profileInfoContainer">
-				<div class="profileInfoRight">
-					<img src="users_images/Emmett_Stevenson.jpg" />
-					<div></div>
-				</div>
-				<div class="profileInfoLeft">
-					<div class="profileName">Emmett	Stevenson<i class="profileMenuIcon noUserSelect material-icons">more_vert</i></div>
-					<div class="profileUserStatus">Contributor</div>
-					
-					<!-- Profile options menu -->
-					<div class="profileOptionMenuMain" style="display:none;">
-						<div class="profileOptionsOption">Edit profile</div>
-						<div class="profileOptionsOption">Settings</div>
-						<a href="index.html"><div class="profileOptionsOption">Log out</div></a>
-					</div>
-				</div>
-				
-				
-			</div>
-			
-			<!-- Tabs -->
-			<div class="fixTheTabs">
-				<div class="tab-wrap">
-				  <input type="radio" name="tabs" id="tab1" checked>
-				  <div class="tab-label-content" id="tab1-content">
-					<label for="tab1" class="noUserSelect">Feed</label>
-				  </div>
-				  <input type="radio" name="tabs" id="tab2">
-				  <div class="tab-label-content" id="tab2-content">
-					<label for="tab2" class="noUserSelect">My news</label>
-				  </div>
-				  <input type="radio" name="tabs" id="tab3">
-				  <div class="tab-label-content" id="tab3-content">
-					<label for="tab3" class="noUserSelect">Up voted news</label>
-				  </div>
-				  <input type="radio" name="tabs" id="tab4">
-				  <div class="tab-label-content" id="tab4-content">
-					<label for="tab4" class="noUserSelect">My questions</label>
-				  </div>
-				  <div class="slide"></div>
-				</div>
-			</div>
-		</section>
 
 		<section class="main-container">
 			
-			<!-- Tabs content -->
-			
-			<!-- Tab 1 content -->
-			<div class="tabContentContainer tab1content">
+			<!-- Content -->
+			<div class="mainContentContainer">
 				<section class="feedHighlightsSection">
 					<div class="feedSectionTitleBar">
 						<div class="feedSectionTitleMain">Highlights</div>
 						<div class="feedSectionSubtitle">Recommended based on your interests</div>
-						<div class="feedSectionConfigBtn noUserSelect"><i class="material-icons">settings</i></div>
+						<div class="feedSectionConfigBtn noUserSelect"><i class="material-icons">settings_applications</i></div>
 					</div>
 					<div class="feedArticlesContainer">
 					
@@ -211,10 +186,19 @@
 						
 					</div>
 				</section>
+				
+				<section class="feedLatestSection">
+					<div class="feedSectionTitleBar">
+						<div class="feedSectionTitleMain">Latest</div>
+						<div class="feedSectionSubtitle">Most recent stories & articles</div>
+					</div>
+					<div class="feedArticlesContainer">
+					</div>
+				</section>
+				
 			</div>
 			
-			<!-- Tab 2 content -->
-			<div class="tabContentContainer tab2content" style="display:none;">
+			<!--<div class="tabContentContainer tab2content" style="display:none;">
 				<div class="contributorPanelMain">
 					
 					<div class="myArticlesMenuTrigger">
@@ -229,17 +213,9 @@
 					
 					<a href="post.html" class="newArticleBtn"><div>New article</div></a>
 					
-				</div>
+				</div>-->
 				<!-- All / My published articles / Pending approval -->
-			</div>
-			
-			<!-- Tab 3 content -->
-			<div class="tabContentContainer tab3content" style="display:none;">
-				All up voted news
-			</div>
-			
-			<!-- Tab 4 content -->
-			<div class="tabContentContainer tab4content" style="display:none;">4</div>
+			<!--</div>-->
 		
 			<footer class="page-footer">
 				<div class="copyright">Android is a trademark of Google Inc.<br>© 2013 - 2017 Android.me News. All Rights Reserved.</div>
@@ -253,7 +229,7 @@
 		<!-- Main script -->
         <script src="res/js/main.js"></script>
 		
-		<script>
+		<script> // See what should be moved to main js file.
 		
 			// disable/enable scroll when menu is open or closed
 			// MOVE TO MAIN.JS FOR BETTER MODULARITY.
@@ -268,19 +244,6 @@
 			$.fn.enableScroll = function() {
 				$(window).off('scroll.scrolldisabler');
 			};
-		
-			// Toggle profile options menu
-			$(document).ready(function(){
-				$("html").click(function(){
-					$(".profileOptionMenuMain").hide();
-					$(this).enableScroll();
-				});
-				$(".profileMenuIcon").click(function(event){
-					event.stopPropagation();
-					$(".profileOptionMenuMain").show();
-					$("body").disableScroll();
-				});
-			});
 			
 			// Toggle my Articles menu
 			$(document).ready(function(){
@@ -295,49 +258,15 @@
 				});
 			});
 			
+			// toggle profile card
+			$(".profileAvatar").click(function(){
+				$(".profileCard").show();
+				event.stopPropagation();
+			});
+			$("html").click(function(){
+				$(".profileCard").hide();
+			});
 
-			// Toggle profile tabs
-			
-			var isTab1 = $('#tab1');
-			var isTab2 = $('#tab2');
-			var isTab3 = $('#tab3');
-			var isTab4 = $('#tab4');
-			
-			$(".tab-wrap input").click(function() {
-				if(isTab1.is(":checked")) {
-					$(".tab1content").show();
-					$(".tab2content").hide();
-					$(".tab3content").hide();
-					$(".tab4content").hide();
-				} else if (isTab2.is(":checked")) {
-					$(".tab1content").hide();
-					$(".tab2content").show();
-					$(".tab3content").hide();
-					$(".tab4content").hide();
-				} else if (isTab3.is(":checked")) {
-					$(".tab1content").hide();
-					$(".tab2content").hide();
-					$(".tab3content").show();
-					$(".tab4content").hide();
-				} else if (isTab4.is(":checked")) {
-					$(".tab1content").hide();
-					$(".tab2content").hide();
-					$(".tab3content").hide();
-					$(".tab4content").show();
-				};
-				$(window).scrollTop(0); // Animate?
-			});
-			
-			
-			// Fix tabs when scrolling
-			
-			$(window).scroll(function() {
-				if($(window).scrollTop() > 102) {
-					$(".fixTheTabs").addClass("tabFixed");
-				} else {
-					$(".fixTheTabs").removeClass("tabFixed");
-				}
-			});
 
 		</script>
 	

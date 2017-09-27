@@ -304,6 +304,104 @@ body {
 }
 
 
+/* ========== Profile card (header) ========== */
+
+.header-menu .profileAvatarContainer {
+	float: right;
+}
+
+.header-menu ul li.profileAvatarContainer:hover {
+	background-color: transparent;
+}
+
+.header-menu .profileAvatar {
+	height: 64px;
+	padding-left: 16px;
+}
+
+.header-menu .profilePicture {
+	height: 44px;
+	width: 44px;
+	border-radius: 100px;
+	margin-top: 10px;
+	border: 2px solid rgb(90, 102, 184);
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.header-menu .profileAvatarContainer .profileCard {
+	position: absolute;
+	line-height: initial;
+	background: #fff;
+	width: 220px;
+	right: 26px;
+	top: 68px;
+	border-radius: 2px;
+	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+	border: 1px solid #E0E0E0;
+	display: none;
+}
+
+.profileAvatarContainer .profileCard .profCard-header {
+	background: #F5F5F5;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 8px 10px;
+}
+
+.profileCard .profCard-header .profHeader-username {
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.64);
+}
+
+.profileCard .profCard-header .profHeader-status {
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #FFC107;
+	padding-top: 4px;
+	letter-spacing: .2px;
+}
+
+.profileAvatarContainer .profileCard .profCard-menu {
+	border-bottom: 1px solid #EEEEEE;
+	/*padding: 4px 0;*/
+}
+
+.profileCard .profCard-menu a {
+	height: 48px;
+	padding: 0 24px;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.84);
+	box-sizing: border-box;
+	line-height: 48px;
+	cursor: pointer;
+	text-transform: none;
+	font-weight: initial;
+	display: block;
+}
+
+.profileCard .profCard-menu a:hover {
+	background: #F5F5F5;
+}
+
+.profileCard .profCard-options a {
+	float: left;
+	width: calc(100% / 3);
+	color: rgba(0, 0, 0, 0.64);
+	border-left: 1px solid #eeeeee;
+	line-height: 67px;
+	height: 52px;
+}
+
+.profileCard .profCard-options a:first-child {
+	border-left: none;
+}
+
+.profileCard .profCard-options a:hover {
+	background: #F5F5F5;
+	cursor: pointer;
+}
+
 
 /* ========== Search bar (header) ========== */
 
