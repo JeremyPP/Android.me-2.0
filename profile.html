@@ -52,6 +52,31 @@
 				<input type="text" name="header-search" value="" class="searchBarInputNotFocus" id="searchBarInput" placeholder="Search, discover, explore...">
 				<i class="material-icons clearSearchBarField noUserSelect" onClick="resetInput()">clear</i>
 			</div>
+			
+			<!-- Profile menu -->
+			<div class="profileAvatarContainer">
+				<div class="profileAvatar">
+					<img src="users_images/Riley_Blue.jpg" class="profilePicture">
+				</div>
+				
+				<!-- Profile card -->
+				<div class="profileCard">
+					<div class="profCard-header">
+						<div class="profHeader-username">Riley Blue</div>
+						<div class="profHeader-status">Contributor</div>
+					</div>
+					<div class="profCard-menu">
+						<a>Feed</a>
+						<a>My articles</a>
+						<a>Favorites</a>
+					</div>
+					<div class="profCard-options">
+						<a><i class="material-icons">edit</i></a>
+						<a><i class="material-icons">settings</i></a>
+						<a><i class="material-icons">exit_to_app</i></a>
+					</div>
+				</div>
+			</div>
             
              <!-- nav menu -->
             <nav class="header-menu">       <!-- TO-DO: links to the other pages -->
@@ -61,34 +86,17 @@
 					<li><a href="reviews.html">Reviews</a></li>
                     <!-- <li><a href="">Profile</a></li>-->
 
-					<!-- Profile menu -->
-					<li class="profileAvatarContainer">
-						<div class="profileAvatar">
-							<img src="users_images/Riley_Blue.jpg" class="profilePicture">
-						</div>
-						
-						<!-- Profile card -->
-						<div class="profileCard">
-							<div class="profCard-header">
-								<div class="profHeader-username">Riley Blue</div>
-								<div class="profHeader-status">Contributor</div>
-							</div>
-							<div class="profCard-menu">
-								<a>Feed</a>
-								<a>My articles</a>
-								<a>Favorites</a>
-							</div>
-							<div class="profCard-options">
-								<a><i class="material-icons">edit</i></a>
-								<a><i class="material-icons">settings</i></a>
-								<a><i class="material-icons">exit_to_app</i></a>
-							</div>
-						</div>
-					</li>
+					
                 </ul>
             </nav>
 			
         </header>
+		
+		<!-- Shadow overlay for the responsive menu -->
+        <div class="responsive-menu-overlay"></div>
+		
+		<!-- Separate content from header (64px) -->
+		<div class="headerSeparatorFIx"></div>
 
 		<section class="main-container">
 			
