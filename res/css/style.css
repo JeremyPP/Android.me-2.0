@@ -397,6 +397,7 @@ header .profileAvatarContainer .profileCard {
 	border-left: 1px solid #eeeeee;
 	line-height: 67px;
 	height: 52px;
+	text-align: center;
 }
 
 .profileCard .profCard-options a:first-child {
@@ -676,6 +677,21 @@ i.searchBarSearchIcon.searchBarIconNotFocus {
     .ndroidme-logo {
         display: none;
     }
+	
+	
+	/* header profile card */
+
+	header .profilePicture {
+		height: 42px;
+		width: 42px;
+		margin-top: 7px;
+		margin-right: -20px;
+	}
+	
+	header .profileAvatarContainer .profileCard {
+		right: 16px;
+		top: 64px;
+	}
     
 	
     /* footer */
@@ -706,6 +722,20 @@ i.searchBarSearchIcon.searchBarIconNotFocus {
 }
 
 @media screen and (max-width: 480px) {
+	
+	
+	/* header profile card */
+	
+	header .profileAvatarContainer .profileCard {
+		border: none;
+		width: 100%;
+		right: 0;
+		top: 56px;
+		border-radius: 0;
+	}
+	
+	
+	/* footer */
 	
 	.page-footer {
 		height: 114px;
