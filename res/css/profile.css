@@ -256,3 +256,27 @@ body {
 	float: left;
 	padding-right: 4px;
 }
+
+
+
+/* ========== Media Queries ========== */
+
+@media screen and (max-width: 840px) {
+	
+	.news-card {
+		width: calc((100% / 2) - 19px);
+	}
+	
+}
+
+@media screen and (max-width: 520px) {
+	
+	.mainContentContainer {
+		padding-top: 0;
+	}
+	
+	.news-card {
+		width: calc(100% - 20px);
+	}	
+	
+}
