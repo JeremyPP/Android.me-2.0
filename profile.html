@@ -52,31 +52,6 @@
 				<input type="text" name="header-search" value="" class="searchBarInputNotFocus" id="searchBarInput" placeholder="Search, discover, explore...">
 				<i class="material-icons clearSearchBarField noUserSelect" onClick="resetInput()">clear</i>
 			</div>
-			
-			<!-- Profile menu -->
-			<div class="profileAvatarContainer">
-				<div class="profileAvatar">
-					<img src="users_images/Emmett_Stevenson.jpg" class="profilePicture">
-				</div>
-				
-				<!-- Profile card -->
-				<div class="profileCard">
-					<div class="profCard-header">
-						<div class="profHeader-username">Emmett Stevenson</div>
-						<div class="profHeader-status">Contributor</div>
-					</div>
-					<div class="profCard-menu">
-						<a>Feed</a>
-						<a>My articles</a>
-						<a>Favorites</a>
-					</div>
-					<div class="profCard-options">
-						<a><i class="material-icons">edit</i></a>
-						<a><i class="material-icons">settings</i></a>
-						<a><i class="material-icons">exit_to_app</i></a>
-					</div>
-				</div>
-			</div>
             
              <!-- nav menu -->
             <nav class="header-menu">       <!-- TO-DO: links to the other pages -->
@@ -85,6 +60,37 @@
                     <li><a href="index.html">News</a></li>
 					<li><a href="reviews.html">Reviews</a></li>
                     <!-- <li><a href="">Profile</a></li>-->
+					
+					<!-- Profile menu -->
+					<div class="profileAvatarContainer">
+						<div class="profileAvatar">
+							<img src="users_images/Emmett_Stevenson.jpg" class="profilePicture">
+						</div>
+						
+						<!-- Profile card -->
+						<div class="profileCard">
+							<div class="profCard-header">
+								<div class="profHeader-username">Emmett Stevenson</div>
+								<div class="profHeader-status">Contributor</div>
+							</div>
+							<div class="profCard-menu">
+							
+								<!-- LInks when responsive menu is active -->
+								<a class="resp-profile-links" href="index.html">News</a>
+								<a class="resp-profile-links" href="reviews.html">Reviews</a>
+								
+								<!-- Profile nav links -->
+								<a href="#">Feed</a>
+								<a href="#">My articles</a>
+								<a href="#">Favorites</a>
+							</div>
+							<div class="profCard-options">
+								<a href="#"><i class="material-icons">edit</i></a>
+								<a href="#"><i class="material-icons">settings</i></a>
+								<a href="index.html"><i class="material-icons">exit_to_app</i></a>
+							</div>
+						</div>
+					</div>
 
 					
                 </ul>
