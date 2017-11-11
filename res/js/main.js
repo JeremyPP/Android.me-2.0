@@ -16,6 +16,15 @@ $(document).ready(function() {
 	});*/
 	
 	
+	// Toggle admin panel banner (Home page)
+	$("#openAdminPanelBanner").click(function(){
+		$(".adminBannerPanelCard").show();
+	});
+	$(".adminBannerPanelCard .cancelBannerChangesBtn").click(function(){
+		$(".adminBannerPanelCard").hide();
+	});
+	
+	
 	// Show/hide clear search bar button on focus
 	searchBarInput.keyup(function() {
 		if( $(this).val().length === 0 ) {

@@ -390,6 +390,30 @@ body {
 }
 
 
+/* Admin panel trigger button (Only visible for the admin.) */
+.adminPanelBtn {
+	position: absolute;
+	top: -44px;
+	right: -44px;
+	color: rgba(255, 255, 255, 0.52);
+	width: 24px;
+	height: 24px;
+	padding: 4px;
+	border-radius: 50%;
+	/*display: none;*/
+}
+
+.adminPanelBtn:hover {
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.64);
+	background: rgba(255, 255, 255, 0.16);
+}
+
+.adminPanelBtn:active {
+	color: rgba(255, 255, 255, 0.87);
+}
+
+
 
 /* ========== Containers ========== */
 
